@@ -1,0 +1,607 @@
+$(document).ready(function(){
+
+    var pagina = 'inicio';
+    var scrollParent;
+    var worksParent;
+    var worksProyecto;
+    var worksTamanyoProyecto;
+    var worksCoordenadasProyecto;
+    var color= 0;
+
+    setTimeout(function(){
+        $('#CONTENEDOR-GENERAL').css('opacity', '1');
+    }, 500);
+
+
+
+
+    /* ============================== AJAX ============================== */
+
+    function cargarPagina(pagina){
+        $.ajax({
+            url: pagina + '.html', 
+            success: function(data){
+
+                $("#CONTENEDOR-PAGINAS").html(data);
+
+                if(pagina == 'works' || pagina == 'about'){
+                    $('#MENU-principal').removeClass('MENU-principal--inicio');
+
+                    setTimeout(function(){
+                        $('#MENU-principal').addClass('MENU-principal--about');
+                        
+                    }, 600);
+
+                }else{
+                    $('#MENU-principal').addClass('MENU-principal--inicio');
+                    $('#MENU-principal').removeClass('MENU-principal--about');
+
+                }
+
+                if(pagina == 'works'){abrirCerrarMenu();
+                        $('#MENU-principal').removeClass('MENU-principal--centrado');
+                    /* setTimeout(function(){ //Tiempo carga imagenes
+                        
+
+                    }, 300); */
+
+                }else{
+                    abrirCerrarMenu();
+
+                    if(pagina == 'about' || pagina == 'contact'){
+                        $('#MENU-principal').addClass('MENU-principal--centrado');
+
+                    }else{
+                        $('#MENU-principal').removeClass('MENU-principal--centrado');
+
+                    }
+
+                }
+            }
+        });
+    }
+
+    cargarPagina(pagina);
+
+
+
+
+    /* ============================== CONTENIDO ADICIONAL ============================== */
+
+    /* -- MODO CINE -- */
+    var elem = document.documentElement;
+    $("#CONTENEDOR-GENERAL").on('click', '.hobbie__icono-cine', function(){
+        $(".modo-cine").toggleClass("modo-cine--activo");
+
+        if($(".modo-cine").hasClass("modo-cine--activo")){
+            openFullscreen()
+        }else{
+            closeFullscreen()
+        }
+    });
+        /* View in fullscreen */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+        /* Close fullscreen */
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+            document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+            }
+        }
+
+        
+    /* -- MODO VIDEOJUEGOS -- */
+
+    /* -- MODO MUSICA -- */
+    var abriendoReproductor = false;
+    $("#CONTENEDOR-GENERAL").on('click', '.hobbie__icono-musica', function(){
+        if(abriendoReproductor == false){
+            abriendoReproductor = true; 
+            
+            $(".ARTI-about__rrss").toggleClass("modo-musica--activo");
+            $(".ARTI-about__presentacion").toggleClass("modo-musica--activo");
+    
+            if($(".ARTI-about__rrss").hasClass("modo-musica--activo")){
+                $('.ARTI-about__yo-nombre').addClass('reproductorActivo');
+                setTimeout(()=>{
+                    imprimirCancion();
+                    $('.ARTI-about__yo-nombre').removeClass('reproductorActivo');
+                }, 250);
+                
+            }else{
+                cancion.pause();
+                $('.ARTI-about__yo-nombre').addClass('reproductorActivo');
+                $('.rrss-faces--play').empty().append('<svg style="transform: rotateY(180deg)" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1290 -118)"><rect width="44" height="44" transform="translate(1290 118)" fill="none"/><path d="M13.136,1.481a1,1,0,0,1,1.728,0L27.123,22.5a1,1,0,0,1-.864,1.5H1.741a1,1,0,0,1-.864-1.5Z" transform="translate(1328 126) rotate(90)"/></g></svg>');
+                cancionPlay = false;
+                clearTimeout(segundosIntervalo);
+                setTimeout(()=>{
+                    $('.ARTI-about__yo-nombre.lang-ES .yo-nombre').empty().append('Adrián García')
+                    $('.ARTI-about__yo-nombre.lang-ES .yo-trabajo').empty().append('Diseñador&nbsp;Gráfico <span id="txt-barra">|</span> Desarrollador&nbsp;Web')
+                    $('.ARTI-about__yo-nombre').removeClass('reproductorActivo');
+                    
+                }, 250)
+                
+            }
+            setTimeout(()=>{abriendoReproductor = false},700); 
+        }
+        
+               
+        
+    });
+    /* -- Reproductor --*/
+    var cancion = new Audio('sound/song0.mp3');
+    var numCancion = 0;
+    var cancionPlay = false;
+    var canciones = [
+        ['Choke', 'I&nbsp;DONT&nbsp;KNOW&nbsp;HOW&nbsp;BUT&nbsp;THEY&nbsp;FOUND&nbsp;ME', 197],
+        ['19-2000&nbsp;-&nbsp;Soulchild&nbsp;Remix', 'Gorillaz', 208],
+        ['Time&nbsp;-&nbsp;2013&nbsp;Remaster', 'David&nbsp;Bowie', 316],
+        ['Whistle&nbsp;For&nbsp;The&nbsp;Choir', 'The&nbsp;Fratellis', 217],
+        ['Oh&nbsp;What&nbsp;A&nbsp;World', 'Rufus&nbsp;Wainwright', 264]
+    ]
+    var nombreC = canciones[0][0];
+    var autorC = canciones[0][1];
+    var duracionC = canciones[0][2];
+    var contadorSec = 0;
+    var segundosIntervalo;
+    $("#CONTENEDOR-GENERAL").on('click', '.rrss-faces--play', function(){
+      
+        if(cancionPlay == false){
+            cancionPlay = true;
+            $('.rrss-faces--play').empty().append('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1540 -118)"><g transform="translate(1551.286 126.286)"><rect width="8" height="28" rx="1" transform="translate(-0.286 -0.286)"/><rect width="8" height="28" rx="1" transform="translate(14.714 -0.286)"/></g><rect width="44" height="44" transform="translate(1540 118)" fill="none"/></g></svg>');
+            cancion.play();
+            crearIntervalo();
+        }else{
+            $('.rrss-faces--play').empty().append('<svg style="transform: rotateY(180deg)" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1290 -118)"><rect width="44" height="44" transform="translate(1290 118)" fill="none"/><path d="M13.136,1.481a1,1,0,0,1,1.728,0L27.123,22.5a1,1,0,0,1-.864,1.5H1.741a1,1,0,0,1-.864-1.5Z" transform="translate(1328 126) rotate(90)"/></g></svg>');
+            cancion.pause();
+            cancionPlay = false;
+            clearTimeout(segundosIntervalo);
+        }       
+        
+    })
+    $("#CONTENEDOR-GENERAL").on('click', '.rrss-faces--prev', function(){
+        pressPrev()
+    })
+    $("#CONTENEDOR-GENERAL").on('click', '.rrss-faces--next', function(){
+        pressNext()
+    });
+    function pressPrev(){
+        $('#line-reproductor').css('width', '0%');
+        clearTimeout(segundosIntervalo);
+        contadorSec = 0;        
+        cancion.pause();
+        numCancion--
+        if(numCancion >= 5){ numCancion = 0 }
+        if(numCancion < 0){numCancion = 4 }
+        duracionC = canciones[numCancion][2];
+        $('.rrss-faces--play').empty().append('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1540 -118)"><g transform="translate(1551.286 126.286)"><rect width="8" height="28" rx="1" transform="translate(-0.286 -0.286)"/><rect width="8" height="28" rx="1" transform="translate(14.714 -0.286)"/></g><rect width="44" height="44" transform="translate(1540 118)" fill="none"/></g></svg>');
+        cargarCancion();
+        cancionPlay = true;
+        cancion.play();
+        crearIntervalo();
+    }
+    function pressNext(){
+        $('#line-reproductor').css('width', '0%');
+        clearTimeout(segundosIntervalo);
+        contadorSec = 0;        
+        cancion.pause();        
+        numCancion++
+        if(numCancion >= 5){ numCancion = 0 }
+        if(numCancion < 0){numCancion = 4 }
+        duracionC = canciones[numCancion][2];
+        $('.rrss-faces--play').empty().append('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1540 -118)"><g transform="translate(1551.286 126.286)"><rect width="8" height="28" rx="1" transform="translate(-0.286 -0.286)"/><rect width="8" height="28" rx="1" transform="translate(14.714 -0.286)"/></g><rect width="44" height="44" transform="translate(1540 118)" fill="none"/></g></svg>');
+        cargarCancion();
+        cancionPlay = true;
+        cancion.play();
+        crearIntervalo();
+    }
+    function cargarCancion(){
+        cancion = new Audio('sound/song'+numCancion+'.mp3');
+        imprimirCancion();
+        imprimirImagenCancion();
+    }
+    function imprimirCancion(){
+        nombreC = canciones[numCancion][0];
+        autorC = canciones[numCancion][1];
+        $('.ARTI-about__yo-nombre.lang-ES .yo-nombre').empty().append(nombreC);
+        $('.ARTI-about__yo-nombre.lang-ES .yo-trabajo').empty().append(autorC);
+    }
+    function imprimirImagenCancion(){
+        imagenC = '<img src="img/cover'+numCancion+'-b.jpg" alt="'+nombreC+'" class="yo-foto"></img>'
+        $('.ARTI-about__yo-foto-faces .foto-faces.faceB').empty().append(imagenC)
+    }
+    function crearIntervalo(){
+        segundosIntervalo = setInterval(()=>{
+            //console.log(contadorSec, duracionC)
+            if(cancionPlay == true){
+                contadorSec++;
+                reglaTres = (contadorSec * 100) / duracionC;
+                $('#line-reproductor').css('width', reglaTres+'%');
+
+                if(contadorSec >= duracionC){
+                    contadorSec = 0;
+                    pressNext();
+                }
+            }
+        }, 1000);
+    }
+
+    /* -- MODO PUZLES -- */
+
+
+    /* -- MODO DINERO -- */
+
+
+    /* -- MODO TEMA -- */
+    $("#CONTENEDOR-GENERAL").on('click', '.hobbie__icono-disenyo', function(){
+        color++;
+        if(color > 6){
+            color = 0;
+        }
+        document.getElementById("theme").href="css/theme"+color+".css";
+    });
+
+    /* -- MODO PIANO -- */
+
+
+    /* -- MODO CHOCOLATE -- */
+    var mordiscos = 0;
+    var imgVec;
+    var mordiscoSound = new Audio('sound/bite.mp3');
+    var Vmordiendo = false;
+    $("#CONTENEDOR-GENERAL").on('click', '.hobbie__icono-chocolate', function(){
+        if(Vmordiendo == false){
+            Vmordiendo = true;
+            mordiscos++;
+            if(mordiscos > 3){ mordiscos = 0 }else{mordiscoSound.play();}
+            if(mordiscos == 0){
+                imgVec = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve" fill="#000000"><g><path d="M57.824,25.213L39.84,7.227c-0.188-0.188-0.441-0.293-0.707-0.293s-0.52,0.105-0.707,0.293L24.263,21.39   L6.227,39.426c-0.188,0.188-0.293,0.441-0.293,0.707s0.105,0.52,0.293,0.707l17.987,17.985c0.195,0.195,0.451,0.293,0.707,0.293   s0.512-0.098,0.707-0.293L36.162,48.29l0.741,1.579c0.139,0.295,0.412,0.504,0.732,0.561c0.058,0.01,0.115,0.015,0.173,0.015   c0.263,0,0.518-0.104,0.707-0.293l9.019-9.019c0.198-0.198,0.305-0.471,0.292-0.751s-0.142-0.542-0.356-0.723l-1.455-1.221   l11.81-11.812C58.215,26.236,58.215,25.604,57.824,25.213z M39.133,9.348l7.579,7.579l-5.668,5.668l-7.579-7.579L39.133,9.348z    M32.051,16.43l7.579,7.579l-4.924,4.924L26.45,22.03L32.051,16.43z M41.044,25.423l7.579,7.579l-4.121,4.121l-8.256-6.902   L41.044,25.423z M24.921,56.704L8.348,40.133l3.068-3.068l16.572,16.572L24.921,56.704z M29.402,52.223L12.83,35.65l11.84-11.84   l10.589,22.555L29.402,52.223z M38.108,47.73l-0.737-1.571c-0.002-0.003-0.002-0.006-0.003-0.009l-8.796-18.733l-0.77-1.64   L45.348,40.49L38.108,47.73z M50.037,31.588l-7.579-7.579l5.667-5.667l7.578,7.578L50.037,31.588z"></path><rect fill="none" width="64" height="64"></rect></g></svg>'
+            }else if(mordiscos == 1){
+                imgVec = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs></defs><rect fill="none" class="cls-1" width="64" height="64"/><path id="_Trazado_compuesto_" data-name="&lt;Trazado compuesto&gt;" d="M53.59,30.86a.87.87,0,0,0,.06-1.21,3.07,3.07,0,0,1-.81-2.17,1.06,1.06,0,0,0-.36-.85,1.1,1.1,0,0,0-.69-.25l-.2,0a3.12,3.12,0,0,1-1,0,3,3,0,0,1-1.38-5.34,1.05,1.05,0,0,0,.41-.91,1,1,0,0,0-.24-.59l-.15-.15a.71.71,0,0,0-.14-.1,2.82,2.82,0,0,1-1-.95,2.93,2.93,0,0,1-.47-2.09,2.86,2.86,0,0,1,.32-1L46.41,13.8,39.84,7.23a1,1,0,0,0-.7-.29,1,1,0,0,0-.71.29L24.27,21.39l-18,18a1,1,0,0,0-.29.71,1,1,0,0,0,.29.7l18,18a1,1,0,0,0,1.41,0L36.17,48.29l.74,1.58a1,1,0,0,0,.73.56l.17,0a1,1,0,0,0,.71-.3l9-9a1,1,0,0,0,.29-.76,1,1,0,0,0-.36-.72L46,38.44l6.76-6.76ZM39.14,9.35l6.44,6.44a1.16,1.16,0,0,0,0,.18,5,5,0,0,0,.1,2L41.05,22.6,33.47,15Zm-7.08,7.08L39.63,24l-4.92,4.93L26.45,22ZM24.93,56.71,8.35,40.14l3.07-3.07L28,53.64Zm4.48-4.48L12.83,35.65,24.67,23.81,35.26,46.37Zm8.7-4.5-.73-1.57h0L28.58,27.42l-.77-1.64L45.35,40.49Zm6.4-10.6-8.26-6.91,4.8-4.79L48.63,33ZM50,31.59,42.46,24l4.12-4.12a3.47,3.47,0,0,0,.4.46,5.1,5.1,0,0,0,3.29,8.15,4.87,4.87,0,0,0,.55.06,5,5,0,0,0,.62,1.63Z"/></svg>'
+            }else if(mordiscos == 2){
+                imgVec = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs></defs><rect fill="none" class="cls-1" width="64" height="64"/><path id="_Trazado_compuesto_" data-name="&lt;Trazado compuesto&gt;" d="M41.05,22.6l-1.48-1.48a4.69,4.69,0,0,0,1.73-1.35,3.43,3.43,0,0,0,.32-.43,4.71,4.71,0,0,0,2.49.2Zm4.82-6a.88.88,0,0,0-.72.25,2.82,2.82,0,0,1-3.44.29,1,1,0,0,0-.87-.11,1,1,0,0,0-.62.61,2.88,2.88,0,0,1-.47.84,2.75,2.75,0,0,1-1.78,1,2.79,2.79,0,0,1-2.22-.6,2.82,2.82,0,0,1-1-1.86,1,1,0,0,0-.54-.78,1,1,0,0,0-.45-.1,1,1,0,0,0-.5.13,2.88,2.88,0,0,1-1,.33,2.38,2.38,0,0,1-.46,0A2.93,2.93,0,0,1,30,16l-.22-.2L6.23,39.43a1,1,0,0,0-.29.71,1,1,0,0,0,.29.7l18,18a1,1,0,0,0,1.41,0L36.17,48.29l.74,1.58a1,1,0,0,0,.73.56l.17,0a1,1,0,0,0,.71-.3l9-9a1,1,0,0,0,.29-.76,1,1,0,0,0-.36-.72L46,38.44l6.76-6.76.81-.82a.87.87,0,0,0,.06-1.21,3.07,3.07,0,0,1-.81-2.17,1.06,1.06,0,0,0-.36-.85,1.1,1.1,0,0,0-.69-.25l-.2,0a3.12,3.12,0,0,1-1,0,3,3,0,0,1-1.38-5.34,1.05,1.05,0,0,0,.41-.91,1,1,0,0,0-.24-.59l-.15-.15a.71.71,0,0,0-.14-.1,2.82,2.82,0,0,1-1-.95,2.76,2.76,0,0,1-.35-.71,1.29,1.29,0,0,0-1-.9ZM30.12,18.36a4.81,4.81,0,0,0,2.93.17,4.83,4.83,0,0,0,4.11,3L39.63,24l-4.92,4.93L26.45,22ZM24.93,56.71,8.35,40.14l3.07-3.07L28,53.64Zm4.48-4.48L12.83,35.65,24.67,23.81,35.26,46.37Zm8.7-4.5-.73-1.57h0L28.58,27.42l-.77-1.64L45.35,40.49Zm6.4-10.6-8.26-6.91,4.8-4.79L48.63,33ZM50,31.59,42.46,24l4.12-4.12a3.47,3.47,0,0,0,.4.46,5.1,5.1,0,0,0,3.29,8.15,4.87,4.87,0,0,0,.55.06,5,5,0,0,0,.62,1.63Z"/></svg>'
+            }else{
+                imgVec = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs></defs><rect fill="none" class="cls-1" width="64" height="64"/></svg>'
+            }
+            $('.hobbie__icono-chocolate').empty().append(imgVec);
+            setTimeout(()=>{Vmordiendo = false},700);
+        }
+        
+    });
+
+
+    /* ============================== MENU ============================== */
+
+    /* -- ABRIR Y CERRAR MENU -- */
+    $('.MENU-principal__icono-menu').click(function(){
+        if(!$('#MENU-principal').hasClass('MENU-principal--work')){
+            abrirCerrarMenu();          
+
+            if(pagina == 'about' || pagina == 'works'){
+                if($('#MENU-principal').hasClass('MENU-principal--open')){
+                    $('#MENU-principal').removeClass('MENU-principal--about');
+                    
+                }else{
+                    setTimeout(function(){ $('#MENU-principal').addClass('MENU-principal--about'); }, 600);
+
+                }
+
+            }else{
+                $('#MENU-principal').removeClass('MENU-principal--about');
+
+            }
+
+        }else{
+            worksParent.children().children('.proyecto-imagen--selecionada').css('opacity', '1');
+            worksParent.children().children('.container').removeClass('slides-activo');
+            $('#ARTI-works .simplebar-content-wrapper').animate({scrollTop: 0}, 'slow');
+
+            worksParent.children().children('.container').css('opacity', '0');
+            $('.ARTI-works__CONT-galeria-proyectos').removeClass('CONT-galeria-proyectos--centrado');
+                
+                setTimeout(function(){
+                    $('#ARTI-works').removeClass('ARTI-works--open');
+                    $('#MENU-principal').toggleClass('MENU-principal--centrado');
+                    $('.ARTI-works__CONT-galeria-proyectos').toggleClass('CONT-galeria-proyectos--open');
+
+                    worksParent.children().children('.proyecto-imagen--selecionada').css({
+                        'width' : worksTamanyoProyecto.width,
+                        'height' : worksTamanyoProyecto.height,
+                        'top' : worksCoordenadasProyecto.top,
+                        'left' : worksCoordenadasProyecto.left,
+                        'background-image' : 'url(img/proyectos/' + worksProyecto + '/portada_-_' + worksProyecto + '.png)'
+                        
+                    });
+
+                    worksParent.parent().children('.ARTI-works__MENU-galeria-proyectos').css('padding-bottom', '3.2rem');
+
+                    worksParent.parents('#ARTI-works')
+                    .find('.ARTI-works__CONT-galeria-proyectos').find('.simplebar-content-wrapper').animate({scrollTop: scrollParent}, 'slow');
+                
+                    
+                    setTimeout(function(){
+                        $('#MENU-principal').removeClass('MENU-principal--work');
+
+                        worksParent.parent().children('.ARTI-works__MENU-galeria-proyectos').css({
+                            'transform' : 'translate(0px, 0px)',
+                            'pointer-events' : 'initial'
+                        })
+                        .children().css('opacity', '1');
+
+                        worksParent.children('.ARTI-works__CONT-proyecto-imagen').css({
+                            'opacity': '1',
+                            'pointer-events': 'initial'
+                        });
+                        worksParent.children().children('.proyecto-imagen--selecionada').css('opacity', '0');
+
+                        setTimeout(function(){
+                            worksParent.children().children('.proyecto-imagen--selecionada').css('display', 'none'); 
+
+                        }, 600);
+                        
+                    }, 600);
+
+                }, 600);
+
+        }
+        
+    });
+
+    function abrirCerrarMenu(){
+        $('#MENU-principal').toggleClass('MENU-principal--open');
+
+        if($('#MENU-principal').hasClass('MENU-principal--open')){
+            $('.MENU-principal__opciones-menu').css('opacity', '1');
+
+        }else{
+            $('.MENU-principal__opciones-menu').css('opacity', '0');
+
+        }
+    };
+
+
+    /* -- SELECCIONAR OPCION DEL MENU -- */
+    $('.opcion-inicio, .opcion-about, .opcion-works, .opcion-contact').click(function(){
+        color = 0;
+        document.getElementById("theme").href="css/theme"+color+".css";
+
+        pagina = $(this).data('url');
+        $(this).parent('ul').children('li').removeClass('opcion--seleccionada');
+        $(this).addClass('opcion--seleccionada');
+        cancion.pause();
+        cancionPlay = false;
+        clearTimeout(segundosIntervalo);
+        cargarPagina(pagina);
+    });
+
+
+
+
+    /* ============================== WORKS ============================== */
+
+    /* -- FILTRO GALERÍA -- */
+    $('#CONTENEDOR-PAGINAS').on('click', '.MENU-galeria__proyectos-opcion', function(){
+        var $este = $(this);
+        var opcion = $este.data('opcion');
+        var $parent = $este.parents('#ARTI-works');
+
+        $('.MENU-galeria__proyectos-opcion').removeClass('proyectos-opcion--seleccionada');
+        $este.addClass('proyectos-opcion--seleccionada');
+
+        if(opcion == 'todos'){
+            $parent.find('.CONT-proyecto-imagen').css('opacity', '0');
+            setTimeout(function(){
+                $parent.find('.CONT-proyecto-imagen').css('display', 'block');
+                $parent.find('.CONT-proyecto-imagen').css('opacity', '1');
+            },600);
+
+        }else if(opcion == 'graficos'){
+            $parent.find('.CONT-proyecto-imagen').css('opacity', '0');
+            setTimeout(function(){
+                $parent.find('.CONT-proyecto-imagen').css('display', 'none');
+                $parent.find('.proyecto-grafico').css('display', 'block');
+                $parent.find('.CONT-proyecto-imagen').css('opacity', '1');
+            },600);
+
+        }else{
+            $parent.find('.CONT-proyecto-imagen').css('opacity', '0');
+            setTimeout(function(){
+                $parent.find('.CONT-proyecto-imagen').css('display', 'none');
+                $parent.find('.proyecto-web').css('display', 'block');
+                $parent.find('.CONT-proyecto-imagen').css('opacity', '1');
+            },600);
+
+        }
+    });
+
+
+    /* -- ABRIR UN PROYECTO -- */
+    var proyecto;
+    var cargarSlides = function cargarSlides() {
+        $("#slides").slidesjs({ pagination: false, navigation: { effect: "fade", active: false }, effect: { fade: { speed: 400 } } });       
+    };
+
+    $('#CONTENEDOR-PAGINAS').on('click', '.CONT-proyecto-imagen', function(){
+        var $este = $(this);
+        var $parent = $este.parents('.ARTI-works__galeria-proyectos');
+        proyecto = $este.data('proyecto');
+        var proyecto_id = $este.data('proyecto_id');
+        var tamanyoObjetoClicado = {
+            width: $este.width(),
+            height: $este.height()
+        };
+        var coordenadasObjetoClicado = $este.position();
+
+
+        //Generar contenido del proyecto seleccionado
+
+        $(".programas__CONT-programas").empty();
+        $("head #script-slides").remove();
+        $(".CONT-proyecto-imagenes").remove();
+        
+        $(".container").append('<div class="CONT-proyecto-imagenes"></div>');
+
+        $(".container").children(".CONT-proyecto-imagenes").addClass('CONT-proyecto-imagenes--'+proyectos[proyecto].imgs)
+
+        for(var i = 0; i < proyectos[proyecto].imgs; i++){
+            $(".CONT-proyecto-imagenes").append('<div class="proyecto-imagenes" style="background-image: url(img/proyectos/' + proyecto + '/' + proyecto + '-' + i + '.png);"></div>');
+            /* $(".CONT-proyecto-imagenes").append('<div class="proyecto-imagenes"><img src="img/proyectos/' + proyecto + '/' + proyectos[proyecto].imgs[i] + '.png"></div>'); */
+        }
+
+        $(".ARTI-works__CONT-datos-proyecto .descripcion-titulo").empty().append(proyectos[proyecto].title);
+        $(".ARTI-works__CONT-datos-proyecto .descripcion-texto").empty().append(proyectos[proyecto].text);
+        
+        for(var i = 0; i < proyectos[proyecto].programs.length; i++){
+            prog = proyectos[proyecto].programs[i];
+            $(".programas__CONT-programas").append(programas[prog]);
+
+        }
+
+        $parent.parents('#ARTI-works').find('.slidesjs-control').css('pointer-events', 'none');
+
+        scrollParent = $parent.parents('#ARTI-works').find('.ARTI-works__CONT-galeria-proyectos').find('.simplebar-content-wrapper').scrollTop();
+        worksParent = $parent;
+        worksProyecto = proyecto;
+        worksTamanyoProyecto = tamanyoObjetoClicado;
+        worksCoordenadasProyecto = coordenadasObjetoClicado;
+
+        $('#MENU-principal').addClass('MENU-principal--work');
+
+        $parent.children().children('.proyecto-imagen--selecionada').css({
+            'display' : 'inline-block',
+            'width' : tamanyoObjetoClicado.width,
+            'height' : tamanyoObjetoClicado.height,
+            'top' : coordenadasObjetoClicado.top,
+            'left' : coordenadasObjetoClicado.left,
+            'background-image' : 'url(img/proyectos/' + proyecto + '/portada_-_' + proyecto + '.jpg)',
+            'opacity' : '1',
+            'pointer-events' : 'none'
+        });
+
+        $parent.parent().children('.ARTI-works__MENU-galeria-proyectos').css({
+            'transform' : 'translate(0px, -30px)',
+            'pointer-events' : 'none'
+        })
+        .children().css('opacity', '0');
+
+        $parent.children('.ARTI-works__CONT-proyecto-imagen').css({
+            'opacity': '0',
+            'pointer-events': 'none'
+        });
+
+        setTimeout(function(){
+            $('#ARTI-works .simplebar-content-wrapper').animate({scrollTop: 0}, 'slow');
+
+            $parent.children().children('.proyecto-imagen--selecionada').css({
+                'width' : '100%',
+                'height' : '100%',
+                'top' : '0px',
+                'left' : '0px',
+            });
+
+            $parent.parent().children('.ARTI-works__MENU-galeria-proyectos').css('padding-bottom', '0rem');
+
+            $('.ARTI-works__CONT-galeria-proyectos').toggleClass('CONT-galeria-proyectos--open');
+            $('#MENU-principal').toggleClass('MENU-principal--centrado');
+
+            setTimeout(function(){
+                $('.ARTI-works__CONT-galeria-proyectos').addClass('CONT-galeria-proyectos--centrado');
+                $parent.children().children('.container').css('opacity', '1');
+                $parent.children().children('.container').addClass('slides-activo');
+                $parent.children().children('.proyecto-imagen--selecionada').css('opacity', '0');
+                $('#ARTI-works').addClass('ARTI-works--open');
+
+            }, 600);
+
+        }, 600);            
+
+    });
+
+
+    /* -- AMPLIAR IMAGEN PROYECTO -- */
+    $("body").on("click", ".container .proyecto-imagenes", function(){
+        
+        var imagenSelect = $(this).css('background-image');
+        imagenSelect = imagenSelect.split('-').pop().split('.').shift();
+        
+        $('.CONT-proyecto-imagen--selecionada-zoom').addClass('imagen-zoom--open');
+        $('.MENU-principal__icono-menu, .MENU-principal__CONT-icono-scroll').addClass('MENU-imagen-zoom--open');
+
+        $("#slides").remove();
+        $('#script-slides').remove();
+        $(".CONT-proyecto-imagen--selecionada-zoom").append('<div id="slides"></div>');
+        
+        $("head").append('<script id="script-slides" src="js/jquery.slides.min.js"></script>');
+    
+        var numeroImagenes = proyectos[proyecto].imgs;
+        var j = imagenSelect;
+        for(var i = 0; i < numeroImagenes; i++){
+            $("#slides").append('<div class="slide-img slidesjs-slide" style="background-image: url(img/proyectos/' + proyecto + '/' + proyecto + '-' + j + '-HD.png); position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; backface-visibility: hidden;"></div>');
+            j++;
+            if(j >= numeroImagenes){
+                j = 0;
+            }
+        }
+        $("#slides").append(
+            `<a href="#" class="slidesjs-previous slidesjs-navigation">
+                <div class="slider-menu__icono-previous">
+                    <span class="icono-scroll__flecha"></span>
+                </div>
+            </a>
+            <a href="#" class="slidesjs-next slidesjs-navigation">
+                <div class="slider-menu__icono-next">
+                    <span class="icono-scroll__flecha"></span>
+                </div>
+            </a>`
+        );
+        cargarSlides();
+
+    });
+    
+    $("body").on("click", ".CONT-proyecto-imagen--selecionada-zoom .slidesjs-container", function(){
+        $('.CONT-proyecto-imagen--selecionada-zoom').removeClass('imagen-zoom--open');
+        $('.MENU-principal__icono-menu, .MENU-principal__CONT-icono-scroll').removeClass('MENU-imagen-zoom--open');
+    });
+
+    
+
+
+    /* ============================== FUNCIONES ============================== */
+
+    /* $(".ARTI-about__CONT-datos-caracteristicas").scroll(function() {
+        $( ".icono-scroll__flecha" ).css( "display", "initial" );
+
+        if($(".ARTI-about__CONT-datos-caracteristicas").scrollTop()){
+            $( ".icono-scroll__flecha" ).css( "display", "none" );
+
+        }
+    }); */
+    
+    //funcion para obener coordenadas
+		/*function obtenerCoordenadas(element) {
+			var $element = $(element),
+				$window = $(window);
+		
+			var scrollLeft = $window.scrollLeft(),
+				scrollTop = $window.scrollTop(),
+				offset = $element.offset();
+		
+			return {
+				left: offset.left - scrollLeft,
+				top: offset.top - scrollTop
+			};
+        }*/
+        
+
+});
