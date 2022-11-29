@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Adrián García</title>
+    <link rel="icon" type="image/png" href="img/ico-a.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,400&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme0.css" id="theme">
+
+    <style id="idioma">
+        /* .lang-ES{ display: none!important; } */
+        /* .lang-EN{ display: none!important; } */
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/proyectos.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    
+    <script>/* OBTENER IDIOMA DEL NAVEGADOR*/
+        window.onload = function () {
+            var ln = navigator.language || navigator.userLanguage;
+
+            if (ln == 'es' || ln == 'es-ES') {
+                $('#idioma').empty().append('.lang-EN{ display: none!important; }');
+
+            }else{
+                $('#idioma').empty().append('.lang-ES{ display: none!important; }');
+            }
+
+        }
+    </script>
+    
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <main id="CONTENEDOR-GENERAL">
+
+        <!-- CONTENIDO ADICIONAL-->
+        <span class="modo-cine">
+            <span class="modo-cine__barra-negra barra-negra--top"></span>
+            <span class="modo-cine__barra-negra barra-negra--bot"></span>
+        </span>
+
+        <span class="CONT-proyecto-imagen--selecionada-zoom">
+            <div id="slides"></div>
+        </span>
+
+        <!-- MENU -->
+        <nav id="MENU-principal" class="MENU-principal--centrado MENU-principal--open  MENU-principal--inicio">
+            <div class="MENU-principal__CONT-icono-menu">
+
+                <div class="MENU-principal__icono-menu">
+                    <span class="icono-menu__linea"></span>
+                    <span class="icono-menu__linea"></span>
+                    <span class="icono-menu__linea"></span>
+                </div>
+
+            </div>
+
+            <div class="MENU-principal__CONT-opciones-menu">
+
+                <ul class="MENU-principal__opciones-menu lang-ES">
+                    <li class="opcion-inicio opcion--seleccionada" data-url="inicio">Inicio</li>
+                    <li class="opcion-about" data-url="about">Perfil</li>
+                    <li class="opcion-works" data-url="works">Proyectos</li>
+                    <li class="opcion-contact" data-url="contact">Contacto</li>
+                </ul>
+
+                <ul class="MENU-principal__opciones-menu lang-EN">
+                    <li class="opcion-inicio opcion--seleccionada" data-url="inicio">Home</li>
+                    <li class="opcion-about" data-url="about">Profile</li>
+                    <li class="opcion-works" data-url="works">Projects</li>
+                    <li class="opcion-contact" data-url="contact">Contact</li>
+                </ul>
+
+            </div>
+
+            <div class="MENU-principal__CONT-icono-scroll">
+
+                <div class="MENU-principal__icono-scroll">
+                    <span class="icono-scroll__flecha"></span>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <div id="CONTENEDOR-PAGINAS">
+            
+        </div>
+    </main>
+</body>
+</html>
