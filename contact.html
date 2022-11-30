@@ -38,16 +38,111 @@
         <section class="ARTI-contact__CONT-formulario">
             <div class="ARTI-contact__formulario">
 
-                <form action="" class="ARTI-contact__formulario-inputs">
-                    <input type="text" placeholder="Nombre" class="formulario-nombre">
-                    <input type="text" placeholder="Correo" class="formulario-correo">
-                    <input type="text" placeholder="Asunto" class="formulario-asunto">
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje" class="formulario-mensaje"></textarea>
-                    <input type="submit" value="Enviar" class="formulario-enviar">
+                <form method="post" action="" class="ARTI-contact__formulario-inputs">
+                    <input type="text" name="nombre" placeholder="Nombre" class="formulario-nombre" id="nombre">
+                    <input type="text" name="correo" placeholder="Correo" class="formulario-correo" id="correo">
+                    <input type="text" name="asunto" placeholder="Asunto" class="formulario-asunto" id="asunto">
+                    <textarea cols="30" name="mensaje" rows="5" placeholder="Mensaje" class="formulario-mensaje" id="mensaje"></textarea>
+                    <input type="submit" value="Enviar" class="formulario-enviar" id="enviar">
                 </form>
+
+                <!-- <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+                    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z">
+                    <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"/>
+                    </path>
+                </svg> -->
+
+                
 
             </div>
         </section>
 
     </article>
+    
+    <script>
+        $(document).ready(function(){
+
+            function validaForm(){
+                
+                var checking = true;
+                var nombre = $('#nombre'), nombreV = nombre.val(),
+                correo = $('#correo'), correoV = correo.val(),
+                asunto = $('#asunto'), asuntoV = asunto.val(),
+                mensaje = $('#mensaje'), mensajeV = mensaje.val();
+
+                if(nombreV == "" || nombreV == null){
+                    nombre.addClass("input--error");
+                    checking = false;
+
+                }else{
+                    var expresion= /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$/;
+                    if(!expresion.test(nombreV)){
+                        nombre.addClass("input--error");
+                        checking = false;
+                    }
+                }
+                    
+                if(correoV == "" || correoV == null){
+                    correo.addClass("input--error");
+                    checking = false;
+                    
+                }else{
+                    var expresion= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+                    if(!expresion.test(correoV)){
+                        correo.addClass("input--error");
+                        checking = false;
+                    }
+                }
+
+                if(asuntoV == "" || asuntoV == null){
+                    asunto.addClass("input--error");
+                    checking = false;
+                }else{
+                    var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
+                    if(!expresion.test(asuntoV)){
+                        asunto.addClass("input--error");
+                        checking = false;
+                    }
+                }
+
+                if(mensajeV == "" || mensajeV == null){
+                    mensaje.addClass("input--error");
+                    checking = false;
+                }else{
+                    var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
+                    if(!expresion.test(mensajeV)){
+                        mensaje.addClass("input--error");
+                        checking = false;
+                    }
+                }
+
+                return checking;
+            }
+        
+            $("body").on("click", "#enviar", function(event) {
+                event.preventDefault();
+                var str = $("form").serialize();
+                if(validaForm()){                               
+                    $.ajax({
+                        type: 'POST',
+                        url: "envio.php",
+                        data: str,
+                        success: function(data) {
+                            console.log(data)
+                            // Imprimimos la respuesta en el div result
+                            //$('#result').html(data);
+
+                        }
+                    })
+                }
+            });
+
+            $("body").on("focus", "#nombre, #correo, #asunto, #mensaje", function(event){
+                $(this).removeClass("input--error");
+                //Shift + Supr para eliminar sugerencias en los inputs
+            });
+
+        });                    
+    </script>
 </body>
