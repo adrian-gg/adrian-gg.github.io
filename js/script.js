@@ -128,6 +128,8 @@ $(document).ready(function(){
                 setTimeout(()=>{
                     $('.ARTI-about__yo-nombre.lang-ES .yo-nombre').empty().append('Adrián García')
                     $('.ARTI-about__yo-nombre.lang-ES .yo-trabajo').empty().append('Diseñador&nbsp;Gráfico <span id="txt-barra">|</span> Desarrollador&nbsp;Web')
+                    $('.ARTI-about__yo-nombre.lang-EN .yo-nombre').empty().append('Adrián García')
+                    $('.ARTI-about__yo-nombre.lang-EN .yo-trabajo').empty().append('Graphic&nbsp;Designer <span id="txt-barra">|</span> Web&nbsp;Developer')
                     $('.ARTI-about__yo-nombre').removeClass('reproductorActivo');
                     
                 }, 250)
@@ -214,8 +216,10 @@ $(document).ready(function(){
     function imprimirCancion(){
         nombreC = canciones[numCancion][0];
         autorC = canciones[numCancion][1];
-        $('.ARTI-about__yo-nombre.lang-ES .yo-nombre').empty().append(nombreC);
+        $('.ARTI-about__yo-nombre.lang-ES .yo-nombre').empty().append(nombreC);        
         $('.ARTI-about__yo-nombre.lang-ES .yo-trabajo').empty().append(autorC);
+        $('.ARTI-about__yo-nombre.lang-EN .yo-nombre').empty().append(nombreC);
+        $('.ARTI-about__yo-nombre.lang-EN .yo-trabajo').empty().append(autorC);
     }
     function imprimirImagenCancion(){
         imagenC = '<img src="img/cover'+numCancion+'-b.jpg" alt="'+nombreC+'" class="yo-foto"></img>'
@@ -460,7 +464,8 @@ $(document).ready(function(){
         }
 
         $(".ARTI-works__CONT-datos-proyecto .descripcion-titulo").empty().append(proyectos[proyecto].title);
-        $(".ARTI-works__CONT-datos-proyecto .descripcion-texto").empty().append(proyectos[proyecto].text);
+        $(".ARTI-works__CONT-datos-proyecto .descripcion-texto.lang-ES").empty().append(proyectos[proyecto].text_ES);
+        $(".ARTI-works__CONT-datos-proyecto .descripcion-texto.lang-EN").empty().append(proyectos[proyecto].text_EN);
         
         for(var i = 0; i < proyectos[proyecto].programs.length; i++){
             prog = proyectos[proyecto].programs[i];
