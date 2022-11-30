@@ -1,22 +1,22 @@
 var proyectos = {
-    'streamloots_platform': {
+    /* 'streamloots_platform': {
         title: 'Plataforma Streamloots',
         type: ['proyecto-web'],
         text: '<span class="texto--parentesis">()</span> <span class="space-box"></span> <a href="#" class="texto--link"></a>',
         programs: ['xd', 'html', 'css', 'js', 'react'],
         imgs: 2
-    },
-    'films': {
-        title: 'Films',
+    }, */
+    'prinet': {
+        title: 'Prinet+',
         type: ['proyecto-web'],
-        text: '<span class="texto--parentesis">()</span> <span class="space-box"></span> <a href="#" class="texto--link"></a>',
+        text: 'Siendo mi primer proyecto serio con React, Prinet+ es una plataforma de streaming gratuita ficticia (de ahí lo de gratis). <span class="space-box"></span> La idea surge de uno de esos días en los que quieres ver una película/serie y no la encuentras en ninguna de las plataformas que pagas, resignandote a tener que irte a páginas en las que juegas con la salud de tu pc.  <span class="space-box"></span>  No es de extrañar que el diseño de estas sea comparable con su seguridad <span class="texto--parentesis">(o sea una mier…)</span> Pero me vino a la cabeza un diseño similar al de una plataforma de streaming. ¿Te imaginas una de esas páginas con un diseño aceptable en la que pudieras ver cualquier cosa a un coste fijo/mensual de 0 yirous y de forma segura? Pues aquí está. <span class="texto--parentesis">(Letra pequeña: este proyecto es solo una simulación, no pretende ofrecer ningún servicio de streaming gratuito)</span>',
         programs: ['illustrator', 'xd', 'html', 'css', 'js', 'react'],
-        imgs: 2
+        imgs: 4
     },
     'cosmere': {
         title: 'Systems of Cosmere',
         type: ['proyecto-web'],
-        text: '<span class="texto--parentesis">()</span> <span class="space-box"></span> <a href="#" class="texto--link"></a>',
+        text: 'El Cosmere es la palabra que define el universo en el cual muchos de los libros de Brandon Sanderson tienen lugar, siendo los sistemas que existen en este universo, el escenario para sus historias. <span class="space-box"></span> Este mini proyecto es la recreación del mapa astral de las constelaciones y los 7 <span class="texto--parentesis">(por el momento)</span>  sistemas solares.  <span class="space-box"></span> Interactuando con cada uno de ellos puedes saber que nombre y número de planetas lo conforman, su posición y todo lo que se conoce hasta la fecha.',
         programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js'],
         imgs: 2
     }, 
@@ -25,7 +25,7 @@ var proyectos = {
         type: ['proyecto-web'],
         text: 'LadySibi es una streamer que saca el mejor partido a Streamloots. Creó una colección de temática Harry Potter con cartas que sumaba o restaba puntos a una de las cuatro casas de Hogwards <span class="texto--parentesis">(Gryffindor, Slytherin, Hufflepuf y Ravenclaw)</span> Sin embargo, este conteo de puntos no estaba automatizado, por lo que era ella misma quien los añadía en una hoja de excel. <span class="space-box"></span> A partir de esta necesidad, se creó un widget que detectaba el canjeo de las cartas y una página con un diseño más visual que mostraba la puntuación de cada casa. <span class="space-box"></span> Más tarde se creó una expansión de animales fantásticos que requirió una sección nueva en la página que contaba el número de animales canjeados.',
         programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js', 'php', 'mysql'],
-        imgs: 3
+        imgs: 4
     },    
     'stl_rangos': {
         title: 'Streamloots: Sistema de Rangos',
@@ -41,13 +41,13 @@ var proyectos = {
         programs: ['illustrator', 'photoshop', 'after_efects'],
         imgs: 7
     },
-    'stl_insignias': {
+    /* 'stl_insignias': {
         title: 'Streamloots: Insignias',
         type: ['proyecto-grafico'],
         text: 'Como cualquier otra comunidad, siempre se pueden diferenciar tres tipos de usuarios según su nivel de importancia/actividad: Streamer, Afiliado y Partner. Y del mismo modo, siempre existen las insignias que los representan. <span class="space-box"></span> Asignando un color a cada insignia y teniendo el hexágono como base se crearon dos versiones, una reducida y otra más detalladas. ',
         programs: ['illustrator'],
         imgs: 3
-    },
+    }, */
     'streamloots_branding': {
         title: 'Streamloots Branding',
         type: ['proyecto-grafico'],
@@ -60,14 +60,14 @@ var proyectos = {
         type: ['proyecto-web'],
         text: 'Durante el postgrado ID3 de Diseño y Desarrollo Web en la ESAT, hemos realizado diferentes proyectos. Presenté Overlays cuando nos pidieron crear un sitio web para ofertar un producto o servicio destinado a un público específico. <span class="space-box"></span> Overlays nace de mi afición por ver a los streamer y, en la mitad de los casos, encontrarme una descuidada manera de presentar su marca en sus canales. <span class="space-box"></span> Overlays es la respuesta para que, por un precio asequible, cualquier streamer pueda crear una identidad única y personal para su canal. <span class="space-box"></span> En Overlays encuentran un amplio abanico de recursos editables e incluso pueden contratar el servicio de creación de recursos personalizados.',
         programs: ['illustrator', 'photoshop', 'after_efects', 'xd', 'html', 'css', 'js'],
-        imgs: 5
+        imgs: 4
     },
     'puzzel_world': {
         title: 'Puzzel World',
         type: ['proyecto-web', 'proyecto-grafico'],
         text: 'Siendo mi proyecto más ambicioso hasta la fecha, Puzzle World <span class="texto--parentesis">(sí, tal cual está escrito)</span> es el resultado de la creación de marca, interfaz, ilustraciones y sitio web para la promoción de un videojuego propio para dispositivos móviles. <span class="space-box"></span> Para sorpresa de nadie <span class="texto--parentesis">(bueno para vosotros si porque no me conocéis muy bien, pero para mis compañeros de diseño que me acompañaron/soportaron durante el curso, pues si e_e)</span> el género del juego fue puzles.<span class="space-box"></span>Mi adicción a los rompecabezas y el odio hacia el éxito de Pokémon Go <span class="texto--parentesis">(nunca entenderé por qué la gente se ponía en peligro para capturar un puñado de polígonos)</span> me han llevado a mezclar ambos géneros y ofrecer con Puzzle World algo diferente, algo por lo que merezca ponerse en peligro.<span class="space-box"></span>Puzzle World consiste en encontrar, capturar y resolver puzzles. Estos, al igual que los pokemons de Pokémon Go, aparecen en cualquier parte del mundo. Si quieres capturarlos, antes debes enfrentarte a un mini juego porque los puzzles se encuentran encerrados en cajas que sólo se abrirán si lo superas. Si fracasas, la caja y el puzzle explotan <span class="texto--parentesis">(¡BOOM!)</span><span class="space-box"></span>Pero si lo consigues sacar de la caja, solo quedará de resolverlo.<span class="space-box"></span>También puedes coleccionarlos e intercambiarlos en caso de que los tengas repetidos.<span class="space-box"></span>Con Puzzle World demuestra que eres mejor que tu amigo, ese con el que siempre te picas en cualquier juego; mejora tu inteligencia y tus reflejos; socializa con gente de otros países…',
         programs: ['illustrator', 'photoshop', 'after_efects', 'xd', 'blender', 'html', 'css', 'js'],
-        imgs: 8
+        imgs: 7
     },
     'mickan': {
         title: 'Mickan',
@@ -115,7 +115,7 @@ var proyectos = {
         title: 'Test',
         date: '2022',
         type: ['proyecto-web', 'proyecto-grafico'],        
-        text: 'Lorem Ipsum',
+        text: 'Lorem Ipsum <span class="texto--parentesis">()</span> <span class="space-box"></span> <a href="#" class="texto--link"></a>',
         programs: ['illustrator', 'photoshop', 'xd'],
         imgs: 3,
         color: {bg:'#B21822', tx: '#B21822'}
