@@ -10,6 +10,7 @@ var proyectos = {
     'prinet': {
         title: 'Prinet+',
         type: ['proyecto-web'],
+        linkPath: "https://adrian-gg.github.io/prinet-web_react/",
         text_ES: `Siendo mi primer proyecto serio con React, Prinet+ es una plataforma de streaming gratuita ficticia <span class="texto--parentesis">(de ahí lo de gratis)</span> <span class="space-box"></span> La idea surge de uno de esos días en los que quieres ver una película/serie y no la encuentras en ninguna de las plataformas que pagas, resignandote a tener que irte a páginas en las que juegas con la salud de tu pc.  <span class="space-box"></span>  No es de extrañar que el diseño de estas sea comparable con su seguridad. Pero me vino a la cabeza un diseño similar al de una plataforma de streaming. ¿Te imaginas una de esas páginas con un diseño aceptable en la que pudieras ver cualquier cosa a un coste fijo/mensual de 0€ y de forma segura? Pues aquí está. <span class="texto--parentesis">(Letra pequeña: este proyecto es solo una simulación, no pretende ofrecer ningún servicio de streaming gratuito)</span>`,
         text_EN: `Being my first serious project with React, Prinet+ is a fictitious free streaming platform <span class="texto--parentesis">(hence the free)</span><span class="space-box"></span>The idea comes from one of those days when you want to watch a movie/series and you can't find it on any of the platforms you pay for, resigning yourself to having to go to pages where you play with the health of your pc.<span class="space-box"></span>It's not surprising that the design of these sites is comparable to their security. But a design similar to that of a streaming platform came to my mind. Can you imagine one of those sites with an acceptable design where you could watch anything at a fixed/monthly cost of $0 and securely? Well, here it is <span class="texto--parentesis">(small print: this project is just a simulation, it does not pretend to offer any free streaming service)</span>`,
         programs: ['illustrator', 'xd', 'html', 'css', 'js', 'react'],
@@ -18,6 +19,7 @@ var proyectos = {
     'cosmere': {
         title: 'Systems of Cosmere',
         type: ['proyecto-web'],
+        linkPath: "https://adrian-gg.github.io/cosmere_systems/",
         text_ES: `El Cosmere es la palabra que define el universo en el cual muchos de los libros de Brandon Sanderson tienen lugar, siendo los sistemas que existen en este universo, el escenario para sus historias. <span class="space-box"></span> Este mini proyecto es la recreación del mapa astral de las constelaciones y los 7 <span class="texto--parentesis">(por el momento)</span> sistemas solares. <span class="space-box"></span> Interactuando con cada uno de ellos puedes saber que nombre y número de planetas lo conforman, su posición y todo lo que se conoce hasta la fecha.`,
         text_EN: `The Cosmere is the word that defines the universe in which many of Brandon Sanderson's books take place, being the systems that exist in this universe, the setting for his stories.<span class="space-box"></span>This mini project is the recreation of the astral map of the constellations and the 7 <span class="texto--parentesis">(for the moment)</span> solar systems.<span class="space-box"></span>By interacting with each of them you can know the name and number of planets, their position and everything that is known to date.`,
         programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js'],
@@ -26,6 +28,7 @@ var proyectos = {
     'ladysibi': {
         title: 'LadySibi',
         type: ['proyecto-web'],
+        linkPath: "https://copacasas.ladysibi.com/",
         text_ES: `LadySibi es una streamer que saca el mejor partido a Streamloots. Creó una colección de temática Harry Potter con cartas que sumaba o restaba puntos a una de las cuatro casas de Hogwards <span class="texto--parentesis">(Gryffindor, Slytherin, Hufflepuf y Ravenclaw)</span> Sin embargo, este conteo de puntos no estaba automatizado, por lo que era ella misma quien los añadía en una hoja de excel. <span class="space-box"></span> A partir de esta necesidad, se creó un widget que detectaba el canjeo de las cartas y una página con un diseño más visual que mostraba la puntuación de cada casa. <span class="space-box"></span> Más tarde se creó una expansión de animales fantásticos que requirió una sección nueva en la página que contaba el número de animales canjeados.`,
         text_EN: `LadySibi is a streamer who makes the most of Streamloots. She created a Harry Potter themed collection with cards that added or subtracted points to one of the four Hogwards houses <span class="texto--parentesis">(Gryffindor, Slytherin, Hufflepuf and Ravenclaw)</span> However, this point count was not automated, so she was the one who added them herself in an excel sheet.<span class="space-box"></span>From this need, a widget was created that detected the redemption of the cards and a page with a more visual design that showed the score of each house. <span class="space-box"></span>Later on, an expansion of fantastic animals was created, which required a new section on the page that counted the number of animals redeemed.`,
         programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js', 'php', 'mysql'],
@@ -34,6 +37,7 @@ var proyectos = {
     'stl_rangos': {
         title: 'Streamloots: Sistema de Rangos',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Para identificar a la comunidad de viewers más activa de Streamloots, se crearon cuatro rangos <span class="texto--parentesis">(Krypto, Diamante, Carbono y Titanio)</span> que reflejan el porcentaje de interactividad con los streamers. Cada mes los rangos se reinician y a medida que apoyas a tu streamer favorito, ya sea comprando cofres, suscribiéndote, participando en subastas o canjeando cartas, subes de nivel. Al final del mes, dependiendo en qué rango acabes, podrás acceder a premios más exclusivos. <span class="space-box"></span>  Con esta información en mente y el objetivo de que el diseño fuera acorde a las insignias streamer, afiliado y partner, todo el diseño se creó a partir de la misma base, el hexágono.`,
         text_EN: `To identify the most active community of Streamloots viewers, four ranks <span class="texto--parentesis">(Krypto, Diamond, Carbon and Titanium)</span> were created to reflect the percentage of interactivity with the streamers. Each month the ranks are reset and as you support your favorite streamer, either by buying chests, subscribing, participating in auctions or trading cards, you level up. At the end of the month, depending on what rank you end up at, you can access more exclusive prizes. <span class="space-box"></span>With this information in mind and with the objective of designing the design according to the streamer, affiliate and partner badges, the whole design was created from the same base, the hexagon.`,
         programs: ['illustrator', 'photoshop'],
@@ -42,6 +46,7 @@ var proyectos = {
     'stl_csjd': {
         title: 'Streamloots: Cursed Seas Judgement Day',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Uno de los grandes eventos que organizó Streamloots junto a Sea of Thieves fue Cursed Seas Judgement Day. Este consistía en cuatro rondas donde tres equipos se enfrentarían por sobrevivir a un cuarto equipo maldito. <span class="space-box"></span> Para el evento se necesitó crear un logo, los anuncios de los equipos y casters que participaban y los overlays para su retransmisión en directo.`,
         text_EN: `One of the big events that Streamloots organized together with Sea of Thieves was Cursed Seas Judgment Day. This consisted of four rounds where three teams would face each other to survive a fourth cursed team.<span class="space-box"></span>For the event it was necessary to create a logo, the advertisements of the teams and casters that participated and the overlays for its live broadcast.`,
         programs: ['illustrator', 'photoshop', 'after_efects'],
@@ -58,6 +63,7 @@ var proyectos = {
     'streamloots_branding': {
         title: 'Streamloots Branding',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Streamloots es una startup dedicada a la venta de cartas digitales para interactuar con los streamers. Estos crean sus colecciones y las presentan a su público, quienes pueden ser más activos en los directos al canjearlas. <span class="space-box"></span> Siendo una de las primeras empresas en las que he trabajado tuve la oportunidad de participar en su rebranding. Con el fin de conseguir un logo más claro, legible y que se adapte a un público más moderno se crea un logo más icónico acompañado de un lenguaje más fluido con las formas. <span class="space-box"></span> A partir de estos cambios se crean todo tipo de anuncios enfocados a la interactividad con las cartas como a networks o las miniaturas de Youtube.`,
         text_EN: `Streamloots is a startup dedicated to the sale of digital cards to interact with streamers. They create their collections and present them to their audience, who can be more active in live shows by redeeming them.<span class="space-box"></span>Being one of the first companies I worked for, I had the opportunity to participate in their rebranding. In order to achieve a clearer, more legible logo that adapts to a more modern public, a more iconic logo was created, along with a more fluid language with the shapes. <span class="space-box"></span>From these changes we created all kinds of ads focused on interactivity with the cards such as networks or YouTube thumbnails.`,
         programs: ['illustrator', 'photoshop', 'after_efects'],
@@ -66,6 +72,7 @@ var proyectos = {
     'overlays': {
         title: 'Overlays',
         type: ['proyecto-web'],
+        linkPath: null,
         text_ES: `Durante el postgrado ID3 de Diseño y Desarrollo Web en la ESAT, hemos realizado diferentes proyectos. Presenté Overlays cuando nos pidieron crear un sitio web para ofertar un producto o servicio destinado a un público específico. <span class="space-box"></span> Overlays nace de mi afición por ver a los streamer y, en la mitad de los casos, encontrarme una descuidada manera de presentar su marca en sus canales. <span class="space-box"></span> Overlays es la respuesta para que, por un precio asequible, cualquier streamer pueda crear una identidad única y personal para su canal. <span class="space-box"></span> En Overlays encuentran un amplio abanico de recursos editables e incluso pueden contratar el servicio de creación de recursos personalizados.`,
         text_EN: `During the ID3 postgraduate course in Web Design and Development at ESAT, we have done different projects. I presented Overlays when we were asked to create a website to offer a product or service aimed at a specific audience.<span class="space-box"></span> Overlays was born from my fondness for watching streamers and, in half of the cases, finding a sloppy way to present their brand on their channels. <span class="space-box"></span>Overlays is the answer so that, for an affordable price, any streamer can create a unique and personal identity for their channel.<span class="space-box"></span>In Overlays they find a wide range of editable assets and can even hire the service of creating custom assets.`,
         programs: ['illustrator', 'photoshop', 'after_efects', 'xd', 'html', 'css', 'js'],
@@ -74,6 +81,7 @@ var proyectos = {
     'puzzel_world': {
         title: 'Puzzel World',
         type: ['proyecto-web', 'proyecto-grafico'],
+        linkPath: null,
         text_ES: `Siendo mi proyecto más ambicioso hasta la fecha, Puzzle World <span class="texto--parentesis">(sí, tal cual está escrito)</span> es el resultado de la creación de marca, interfaz, ilustraciones y sitio web para la promoción de un videojuego propio para dispositivos móviles. <span class="space-box"></span> Mi adicción a los rompecabezas y el odio hacia el éxito de Pokémon Go <span class="texto--parentesis">(nunca entenderé por qué la gente se ponía en peligro para capturar un puñado de polígonos)</span> me han llevado a mezclar ambos géneros y ofrecer con Puzzle World algo diferente, algo por lo que merezca ponerse en peligro.<span class="space-box"></span>Puzzle World consiste en encontrar, capturar y resolver puzzles. Estos, al igual que los pokemons de Pokémon Go, aparecen en cualquier parte del mundo. Si quieres capturarlos, antes debes enfrentarte a un mini juego porque los puzzles se encuentran encerrados en cajas que sólo se abrirán si lo superas. Si fracasas, la caja y el puzzle explotan <span class="texto--parentesis">(¡BOOM!)</span><span class="space-box"></span>Pero si lo consigues sacar de la caja, solo quedará de resolverlo.<span class="space-box"></span>También puedes coleccionarlos e intercambiarlos en caso de que los tengas repetidos.<span class="space-box"></span>Con Puzzle World demuestra que eres mejor que tu amigo, ese con el que siempre te picas en cualquier juego; mejora tu inteligencia y tus reflejos; socializa con gente de otros países…`,
         text_EN: `Being my most ambitious project to date, Puzzle World <span class="texto--parentesis">(yes, as it is written)</span> is the result of the creation of branding, interface, illustrations and website for the promotion of a video game for mobile devices.<span class="space-box"></span>My addiction to puzzles and hatred for the success of Pokémon Go <span class="texto--parentesis">(I will never understand why people put themselves in danger to capture a handful of polygons)</span> have led me to mix both genres and offer with Puzzle World something different, something worth putting yourself in danger for.<span class="space-box"></span>Puzzle World is all about finding, capturing and solving puzzles. These, like the Pokémon Go pokemons, appear anywhere in the world. If you want to capture them, you must first face a mini game because the puzzles are enclosed in boxes that will only open if you overcome it. If you fail, the box and the puzzle explode <span class="texto--parentesis">(BOOM!)</span> But if you manage to get it out of the box, the only thing left to do is to solve it.<span class="space-box"></span>You can also collect them and exchange them in case you have them repeated.<span class="space-box"></span>With Puzzle World shows that you are better than your friend, the one with whom you always get annoyed in any game; improve your intelligence and your reflexes; socialize with people from other countries...`,
         programs: ['illustrator', 'photoshop', 'after_efects', 'xd', 'blender', 'html', 'css', 'js'],
@@ -82,6 +90,7 @@ var proyectos = {
     'mickan': {
         title: 'Mickan',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Lorena, o más conocida por sus seguidores como Mickan, es una creadora de covers de piano en YouTube y amante de los videojuegos. Estas aficiones se han convertido en su trabajo y actualmente realiza directos en la plataforma de Twitch dedicados al Just Chatting y a hacer gameplays. <span class="space-box"></span> Siendo el zorro la mascota de su canal, quiere renovar su marca buscando una apariencia más profesional sin renunciar a su estilo.`,
         text_EN: `Lorena, or better known by her followers as Mickan, is a creator of piano covers on YouTube and a video game lover. These hobbies have become her job and she currently performs live on the Twitch platform dedicated to Just Chatting and making gameplays.<span class="space-box"></span>Being the fox the mascot of her channel, she wants to renew her brand looking for a more professional look without giving up her style.`,
         programs: ['illustrator', 'photoshop', 'xd'],
@@ -90,6 +99,7 @@ var proyectos = {
     '3_kings': {
         title: '3 Kings',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Siendo uno de mis primeros trabajos durante mis estudios de Diseño, el proyecto consistía en crear una identidad gráfica sobre un personaje ficticio.<span class="space-box"></span>Aprovechando la inexistencia de una marca que representara a los 3 reyes magos pero que si existiese, sería con un estilo clásico, decidí modernizarlo, dando más posibilidades para jugar con la marca.`,
         text_EN: `Being one of my first jobs during my design studies, the project consisted in creating a graphic identity about a fictitious character.<span class="space-box"></span>Taking advantage of the non-existence of a brand that represented the 3 kings but if it existed, it would be with a classic style, I decided to modernize it, giving more possibilities to play with the brand.`,
         programs: ['illustrator', 'photoshop', 'indesign'],
@@ -98,6 +108,7 @@ var proyectos = {
     'heartnology': {
         title: 'Heartnology',
         type: ['proyecto-web', 'proyecto-grafico'],
+        linkPath: null,
         text_ES: `Herartnology es una empresa que surge a partir de la iniciativa de un estudiante de bioquímica y ciencias biomédicas <span class="texto--parentesis">(aunque también mi fiel compañero de armas en las partidas más intensas de Lol)</span> de ofrecer un diagnóstico seguro y sin técnicas invasivas para detectar el posible rechazo en un trasplante cardiaco.<span class="space-box"></span>Esta idea que ganó el primer premio en diversos concursos necesitó una identidad gráfica, diseño de packaging y un sitio web que muy amablemente acepté diseñar por dinero.`,
         text_EN: `Herartnology is a company that arises from the initiative of a student of biochemistry and biomedical sciences <span class="texto--parentesis">(although also my faithful companion in arms in the most intense games of Lol)</span> to offer a safe diagnosis without invasive techniques to detect possible rejection in a heart transplant.<span class="space-box"></span>This idea that won the first prize in several contests needed a graphic identity, packaging design and a website that I kindly accepted to design for money.`,
         programs: ['illustrator', 'photoshop', 'after_efects', 'premiere_pro', 'xd', 'html', 'css', 'js', 'php'],
@@ -106,6 +117,7 @@ var proyectos = {
     'el_far': {
         title: 'El Far',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `El Far es un trabajo que nace de un tipo de cliente habitual: un pequeño restaurante. Este fue construido a partir de un faro y tiene la peculiaridad de que solo abre por la noche.<span class="space-box"></span>El proyecto era la creación de la identidad a partir de su nombre. Jugué con la forma o figura que tiene la letra F para crear un faro <span class="texto--parentesis">(tal vez me lo fui muy conceptual pero... al menos el faro se ve ¿no?)</span>`,
         text_EN: `El Far is a work born from a type of regular client: a small restaurant. This was built from a lighthouse and has the peculiarity that only opens at night.<span class="space-box"></span>The project was the creation of the identity from its name <span class="texto--parentesis">(the truth is that they didn't get their heads too hot)</span> I played with the shape of the letter F to create a lighthouse <span class="texto--parentesis">(maybe I went too conceptual but... at least the lighthouse is visible, isn't it?)</span>`,
         programs: ['illustrator', 'photoshop', 'indesign'],
@@ -114,6 +126,7 @@ var proyectos = {
     'guinxu': {
         title: 'Guinxu',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Presentándose como un youtuber con más de 400.000 seguidores y dedicado al desarrollo de videojuegos de manera independiente, Guillem <span class="texto--parentesis">(Guinxu)</span> pretende darse a conocer en la industria de este sector. Pese a crear una marca que durante estos años ha ido moldeando a partir de los juegos que ha creado, no ha conseguido crear una identidad independiente a sus trabajos.<span class="space-box"></span>Su objetivo ahora, es dar el salto a la plataforma de streaming de Twitch, ocasión perfecta para un lavado de cara y actualización de su marca y para crear las overlays con las que hará directos.`,
         text_EN: `Introducing himself as a youtuber with more than 400,000 followers and dedicated to the development of video games independently, Guillem <span class="texto--parentesis">(Guinxu)</span> aims to make himself known in the industry of this sector. Despite creating a brand that over the years has been molded from the games he has created, he has not managed to create an independent identity for his work.<span class="space-box"></span>His goal now is to make the leap to the Twitch streaming platform, perfect occasion for a facelift and update of his brand and to create the overlays with which he will do live.`,
         programs: ['illustrator', 'photoshop', 'xd'],
@@ -122,6 +135,7 @@ var proyectos = {
     'zonoz': {
         title: 'Zonoz',
         type: ['proyecto-grafico'],
+        linkPath: null,
         text_ES: `Zonoz es el resultado del proyecto sobre tipografía creativa que realicé durante mis estudios en Diseño Gráfico. Es una marca de vino propia. Como requisito, tenía que utilizar una pluma de escribir, o al menos que en el diseño final se viera el uso de la misma.<span class="space-box"></span>Mi gusto por las palabras curiosas hizo que escogiera un nombre palíndromo <span class="texto--parentesis">(osea que se lee igual de izquierda a derecha que de derecha a izquierda)</span> Así, independientemente de  cómo se cogiese la botella, siempre se leería ZONOZ.`,
         text_EN: `Zonoz is the result of the creative typography project I did during my studies in Graphic Design. It is a wine brand of my own. As a requirement, I had to use a writing pen, or at least in the final design I had to show the use of it.<span class="space-box"></span>My taste for curious words made me choose a palindrome name <span class="texto--parentesis">(meaning that it reads the same from left to right as from right to left)</span> This way, no matter how the bottle was picked up, it would always read ZONOZ.`,
         programs: ['illustrator', 'photoshop', 'indesign'],
