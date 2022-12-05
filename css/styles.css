@@ -741,6 +741,26 @@ section.ARTI-about__CONT-caracteristicas{
     height: 1.5rem;
 }
 
+.hobbie__icono-puzles,
+.hobbie__icono-disenyo,
+.hobbie__icono-musica,
+.hobbie__icono-cine,
+.hobbie__icono-chocolate{
+    cursor: pointer;
+}
+
+.hobbie__icono-puzles{
+    animation: puzle 5s linear infinite;
+}
+@keyframes puzle {
+    0% { transform: rotate(0deg); }
+    1% { transform: rotate(8deg); }
+    2% { transform: rotate(0eg); }
+    3% { transform: rotate(-8deg); }
+    4% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .hobbie__icono-disenyo:hover svg{ animation: coloresbonicos 3s linear infinite; }
 
 @keyframes coloresbonicos{
