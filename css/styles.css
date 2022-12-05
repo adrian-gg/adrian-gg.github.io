@@ -32,6 +32,8 @@
     --bgc-grey: grey;
     --bgc-lightgrey: lightgrey;
 
+    --input-error: #ff5656;
+
     --bgc-background-rgb: 48, 48, 48;
     --bgc-text-rgb: 245, 245, 245;
 
@@ -978,6 +980,7 @@ section.ARTI-works__CONT-proyecto-detalles{
     width: 50%;
     position: absolute;
     right: 0;
+    overflow: hidden;
 }
 
 .ARTI-works__CONT-proyecto-detalles:before,
@@ -1027,6 +1030,20 @@ section.ARTI-works__CONT-proyecto-detalles{
     width: 100%;
     margin-bottom: 46px;
     line-height: 2.4rem;
+}
+.descripcion-titulo{
+    display: inline-flex;
+}
+.descripcion-titulo a{
+    width: 2rem;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.ARTI-works__proyecto-link svg{
+    width: 100%;
+    height: 100%;
+    fill: var(--bgc-text);
 }
 
 .programas__CONT-programas{
@@ -1305,6 +1322,17 @@ section.ARTI-contact__CONT-formulario{
 .formulario-enviar--activado{
     background-color: var(--bgc-text);
     color: var(--bgc-background, #303030);
+}
+
+.ARTI-contact__formulario-inputs .input--error{    
+    border-bottom: 1.5px solid var(--input-error);
+}
+
+.ARTI-contact__formulario-inputs .input--error.formulario-nombre::placeholder,
+.ARTI-contact__formulario-inputs .input--error.formulario-correo::placeholder,
+.ARTI-contact__formulario-inputs .input--error.formulario-asunto::placeholder, 
+.ARTI-contact__formulario-inputs .input--error.formulario-mensaje::placeholder{
+    color: var(--input-error);
 }
 
 
