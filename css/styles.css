@@ -840,7 +840,6 @@ section.ARTI-works__CONT-galeria-proyectos{
 .ARTI-works__galeria-proyectos{
     /*width: calc(100% - 21rem);
     max-width: calc(100% - 21rem);*/
-
     width: 85%;
     max-width: 150rem;
     margin: 0 auto;
@@ -873,6 +872,71 @@ section.ARTI-works__CONT-galeria-proyectos{
     transition: 0.6s;
     pointer-events: initial;
     /*opacity: 0;*/
+}
+
+.CONT-proyecto-imagenes{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1.6rem, 1fr));
+    grid-template-rows: repeat(4, minmax(1.6rem, 1fr));
+    grid-auto-rows: minmax(1.6rem, 1fr);
+    grid-gap: 0.4rem;
+}
+.proyecto-imagenes{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+/*.proyecto-imagenes:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+}*/
+
+
+/*--1 imagenes--*/
+.CONT-proyecto-imagenes--1 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/5;
+}
+/*--2 imagenes--*/
+.CONT-proyecto-imagenes--2 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+.CONT-proyecto-imagenes--2 .proyecto-imagenes:nth-child(2){
+    grid-column: 1/4;
+    grid-row: 3/5;
+}
+/*--4 imagenes--*/
+.CONT-proyecto-imagenes--4 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+.CONT-proyecto-imagenes--4 .proyecto-imagenes:nth-child(2){
+    grid-column: 1/3;
+    grid-row: 3/5;
+}
+/*--6 imagenes--*/
+.CONT-proyecto-imagenes--6 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.CONT-proyecto-imagenes--6 .proyecto-imagenes:nth-child(6){
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+/*--7 imagenes--*/
+.CONT-proyecto-imagenes--7 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+/*--9 imagenes--*/
+.CONT-proyecto-imagenes--8 .proyecto-imagenes:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
 }
 
 .ARTI-works__MENU-galeria-proyectos{
@@ -928,6 +992,7 @@ section.ARTI-works__CONT-galeria-proyectos{
 }
 
 .CONT-proyecto-imagen{
+    aspect-ratio: 1/1;
     width: 100%;
     height: 100%;
     background-color: var(--bgc-background-img, #3e3e3e);
@@ -1666,7 +1731,7 @@ section.ARTI-contact__CONT-formulario{
 
     section.ARTI-works__CONT-galeria-proyectos{
         /*padding-bottom: 4.2rem!important;*/
-        height: 75vh;
+        /* height: 75vh; */
     }
 
     .ARTI-works__MENU-galeria-proyectos{
@@ -1758,3 +1823,7 @@ section.ARTI-contact__CONT-formulario{
 		display: flex;
 	}
 } */
+
+.reload-box{
+    height: initial!important;
+}
