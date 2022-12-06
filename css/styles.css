@@ -801,22 +801,22 @@ section.ARTI-about__CONT-caracteristicas{
     height: 64.9rem;
     background-color: var(--bgc-text);
     position: absolute;
-    z-index: 9;
     transition: .4s;
+    z-index: 9;
 }
 
-/* .CONT-proyecto-imagen--selecionada-zoom div
+.CONT-proyecto-imagen--selecionada-zoom div
 {
-    background-size: contain;
+    /* background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-} */
+    background-repeat: no-repeat; */
+    pointer-events: none;
+}
 
 .CONT-proyecto-imagen--selecionada-zoom.imagen-zoom--open,
 .CONT-proyecto-imagen--selecionada-zoom.imagen-zoom--open div{
     opacity: 1;
     visibility: initial;
-    pointer-events: initial;
 }
 
 #ARTI-works > .simplebar-wrapper > .simplebar-mask > .simplebar-offset > .simplebar-content-wrapper > .simplebar-content{
@@ -1001,7 +1001,7 @@ section.ARTI-works__CONT-proyecto-detalles{
     width: 50%;
     position: absolute;
     right: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .ARTI-works__CONT-proyecto-detalles:before,
@@ -1574,6 +1574,13 @@ section.ARTI-contact__CONT-formulario{
         overflow: scroll!important;
     }
 
+    .CONT-proyecto-imagenes .proyecto-imagenes{
+        pointer-events: none;
+    }
+    #ARTI-works.ARTI-works--open .CONT-proyecto-imagenes .proyecto-imagenes{
+        pointer-events: initial;
+    }
+
     .CONT-galeria-proyectos--open .simplebar-content-wrapper{
         overflow: initial!important;
     }
@@ -1650,6 +1657,9 @@ section.ARTI-contact__CONT-formulario{
         margin-bottom: 4.6rem;
         height: 75vh;
     }
+    .ARTI-about__CONT-datos-caracteristicas{
+        width: 96%;
+    }
     
 
     /*------------------ WORKS ------------------*/
@@ -1671,6 +1681,13 @@ section.ARTI-contact__CONT-formulario{
 
     .ARTI-works__CONT-proyecto-imagen{
         grid-template-columns: repeat(2, minmax(1.6rem, 1fr));
+    }
+
+    .ARTI-works__galeria-proyectos{
+        width: 96%;
+    }
+    .ARTI-works__CONT-datos-proyecto{
+        width: 96%;
     }
 
 }
