@@ -49,6 +49,7 @@
     --fz-h4: 2.0rem;
     --fz-h5: 1.8rem;
     --fz-text: 1.6rem;
+
 }
 
 *{
@@ -1605,7 +1606,7 @@ section.ARTI-contact__CONT-formulario{
 @media screen and (max-width: 768px){
 
 	html{
-		font-size: 1.25vmax!important;
+		font-size: 1.23vmax!important;
     }
 
     /* MENU */
@@ -1640,11 +1641,6 @@ section.ARTI-contact__CONT-formulario{
 
 /*================= MEDIA QUERY (MOBILE) =================*/
 @media screen and (max-width: 425px){
-
-	html{
-		font-size: 1.45vmax!important;
-    }
-
 
     /*------------------ ABOUT ------------------*/
 
