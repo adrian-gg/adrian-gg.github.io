@@ -7,13 +7,18 @@ $(document).ready(function(){
     var worksTamanyoProyecto;
     var worksCoordenadasProyecto;
     var color= 0;
+    var widthS = $(window).width(), heightS = $(window).height();
+    var device = widthS > heightS ? "PC" : "MOBIL";
 
     setTimeout(function(){
         $('#CONTENEDOR-GENERAL').css('opacity', '1');
     }, 500);
 
-
-
+    $(window).resize(function(){
+        widthS = $(window).width();
+        heightS = $(window).height();
+        device = widthS > heightS ? "PC" : "MOBIL";
+    })
 
     /* ============================== AJAX ============================== */
 
@@ -555,8 +560,10 @@ $(document).ready(function(){
     
         var numeroImagenes = proyectos[proyecto].imgs;
         var j = imagenSelect;
+        var sizeImg = device == "PC" ? "-HD" : "";
+
         for(var i = 0; i < numeroImagenes; i++){
-            $("#slides").append('<div class="slide-img slidesjs-slide" style="background-image: url(img/proyectos/' + proyecto + '/' + proyecto + '-' + j + '-HD.png); position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; backface-visibility: hidden;"></div>');
+            $("#slides").append('<div class="slide-img slidesjs-slide" style="background-image: url(img/proyectos/' + proyecto + '/' + proyecto + '-' + j + sizeImg +'.png); position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; backface-visibility: hidden;"></div>');
             j++;
             if(j >= numeroImagenes){
                 j = 0;
