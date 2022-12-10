@@ -34,7 +34,7 @@ var proyectos = {
         programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js', 'php', 'mysql'],
         imgs: 4
     },    
-    'stl_rangos': {
+    /*'stl_rangos': {
         title: 'Streamloots: Sistema de Rangos',
         type: ['proyecto-grafico'],
         linkPath: null,
@@ -42,7 +42,7 @@ var proyectos = {
         text_EN: `To identify the most active community of Streamloots viewers, four ranks <span class="texto--parentesis">(Krypto, Diamond, Carbon and Titanium)</span> were created to reflect the percentage of interactivity with the streamers. Each month the ranks are reset and as you support your favorite streamer, either by buying chests, subscribing, participating in auctions or trading cards, you level up. At the end of the month, depending on what rank you end up at, you can access more exclusive prizes. <span class="space-box"></span>With this information in mind and with the objective of designing the design according to the streamer, affiliate and partner badges, the whole design was created from the same base, the hexagon.`,
         programs: ['illustrator', 'photoshop'],
         imgs: 4
-    },
+    },*/
     'stl_csjd': {
         title: 'Streamloots: Cursed Seas Judgement Day',
         type: ['proyecto-grafico'],
