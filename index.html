@@ -29,9 +29,11 @@
 
             if (ln == 'es' || ln == 'es-ES') {
                 $('#idioma').empty().append('.lang-EN{ display: none!important; }');
+                $('#language-es').addClass('selected-icono-language');
 
             }else{
                 $('#idioma').empty().append('.lang-ES{ display: none!important; }');
+                $('#language-en').addClass('selected-icono-language');
             }
 
         }
@@ -81,6 +83,15 @@
 
             </div>
 
+            <div class="MENU-principal__CONT-icono-language">
+
+                <div class="MENU-principal__icono-language">
+                    <span class="icono-language" data-language="language-en" id="language-en">EN</span>
+                    <span class="icono-language" data-language="language-es" id="language-es">ES</span>
+                </div>
+
+            </div>
+
             <div class="MENU-principal__CONT-icono-scroll">
 
                 <div class="MENU-principal__icono-scroll">
@@ -95,5 +106,25 @@
             
         </div>
     </main>
+
+    <script>/* CAMBIAR IDIOMA */
+      $(document).ready(function(){
+          $('.icono-language').click(function(){
+
+              $('.icono-language').removeClass('selected-icono-language');
+              $(this).addClass('selected-icono-language');
+
+              if($(this).attr('data-language') == "language-en"){
+                $('#idioma').empty().append('.lang-ES{ display: none!important; }');
+
+              }else{
+                $('#idioma').empty().append('.lang-EN{ display: none!important; }');
+
+              }
+          })
+
+      });
+  </script>
+
 </body>
 </html>
