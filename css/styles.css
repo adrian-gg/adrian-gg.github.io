@@ -49,6 +49,7 @@
     --fz-h4: 2.0rem;
     --fz-h5: 1.8rem;
     --fz-text: 1.6rem;
+    --fz-text-s: 1.4rem;
 
 }
 
@@ -447,6 +448,55 @@ ul{ list-style: none; }
 .opcion--seleccionada{
     color: var(--bgc-text);
     pointer-events: none;
+}
+
+/* -- ICONO MENU language -- */
+
+.MENU-principal__CONT-icono-language{
+  width: 100%;
+  height: 3rem;
+  margin-top: 1.6rem;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  transition: 0.6s;
+}
+
+.MENU-principal--inicio .MENU-principal__CONT-icono-language{ 
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.MENU-principal--open .MENU-principal__CONT-icono-language{ opacity: 0; }
+
+.MENU-principal__icono-language{
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateX(-50%);
+  transition: left 0.6s;
+  color: var(--bgc-white);
+  font-family: var(--ff-text-n);
+  font-size: var(--fz-text-s);
+  text-align: center;
+}
+
+/* .MENU-principal--centrado .MENU-principal__icono-language{ left: 50%; } */
+
+.MENU-principal__icono-language .icono-language{
+  display: inline-block;
+  width: 2.6rem;
+  cursor: pointer;
+  pointer-events: inherit;
+  /* height: 2.6rem; */
+}
+
+.icono-language.selected-icono-language{
+  font-family: var(--ff-text-sb);
+  pointer-events: none;
+  color: var(--bgc-text-o)
 }
 
 
@@ -1549,7 +1599,7 @@ section.ARTI-contact__CONT-formulario{
         margin-top: 0;
     }
 
-    .MENU-principal__icono-scroll{
+    .MENU-principal__icono-scroll, .MENU-principal__icono-language{
         left: 50%;
     }
 
