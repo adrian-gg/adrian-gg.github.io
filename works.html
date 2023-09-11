@@ -1,0 +1,78 @@
+<body>
+    <article id="ARTI-works" data-simplebar>
+
+        <section class="ARTI-works__CONT-galeria-proyectos" data-simplebar>
+
+            <nav class="ARTI-works__MENU-galeria-proyectos">
+
+                <ul class="MENU-galeria-proyectos lang-ES">
+                    <li class="MENU-galeria__proyectos-opcion proyectos-opcion--seleccionada" data-opcion="todos">Todos</li>
+                    <li class="MENU-galeria__proyectos-opcion" data-opcion="graficos">Gráficos</li>
+                    <li class="MENU-galeria__proyectos-opcion" data-opcion="web">Web</li>
+                </ul>
+                <ul class="MENU-galeria-proyectos lang-EN">
+                    <li class="MENU-galeria__proyectos-opcion proyectos-opcion--seleccionada" data-opcion="todos">All</li>
+                    <li class="MENU-galeria__proyectos-opcion" data-opcion="graficos">Graphics</li>
+                    <li class="MENU-galeria__proyectos-opcion" data-opcion="web">Web</li>
+                </ul>
+
+            </nav>
+
+            <div class="ARTI-works__galeria-proyectos">
+
+                <span class="CONT-proyecto-imagen--selecionada">
+                    <span class="proyecto-imagen--selecionada"></span>
+
+                    <!-- SLIDER -->
+                    <div class="container">
+                        <div class="CONT-proyecto-imagenes"></div>                    
+                        <!-- <div id="slides"></div> -->
+                    </div>
+
+                </span>
+
+                <div class="ARTI-works__CONT-proyecto-imagen"></div>
+
+            </div>
+        </section>
+
+        <section class="ARTI-works__CONT-proyecto-detalles">
+            <div class="ARTI-works__proyecto-detalles" data-simplebar>
+
+                <div class="ARTI-works__CONT-datos-proyecto">
+                    <div class="ARTI-works__proyecto-descripcion">
+                        <h4 class="descripcion-titulo"></h4>
+                        <div class="descripcion-texto lang-ES"></div>
+                        <div class="descripcion-texto lang-EN"></div>
+                    </div>
+
+                    <div class="ARTI-works__proyecto-programas">
+                        <h4 class="programas-titulo lang-ES">Programas</h4>
+                        <h4 class="programas-titulo lang-EN">Programs</h4>
+                        <div class="programas__CONT-programas"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    <script>
+        $(document).ready(function(){
+            let projectsKeys = Object.keys(PROJECTS);
+            
+            for(var i = 0; i < projectsKeys.length; i++){
+                let typeProject = PROJECTS[projectsKeys[i]].type.join(' ');
+                $('.ARTI-works__CONT-proyecto-imagen').append(
+                    `<div class="CONT-proyecto-imagen ${typeProject}" data-proyecto="${projectsKeys[i]}">
+                        <span class="proyecto-nombre"><h5>${PROJECTS[projectsKeys[i]].title}</h5></span>
+                        <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.png" alt="Imagen con fondo transparente del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen">
+                        <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.jpg" alt="Imagen del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen-color">
+                    </div>`
+                );
+                
+            }
+        });
+    </script>
+</body>

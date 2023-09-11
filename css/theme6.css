@@ -1,0 +1,12 @@
+:root{
+	--bgc-background: #71df6e;
+    --ie-bgc-background : var(--bgc-background);
+    --bgc-background-img: #71df6e;
+    --bgc-border: #2123668c;
+    --bgc-text-o: #2123668c;
+    --bgc-text: #212366;
+}
+
+.ARTI-about__yo-foto .yo-foto{
+	mix-blend-mode: luminosity!important;
+}
