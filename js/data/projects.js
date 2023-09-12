@@ -1,4 +1,13 @@
 const PROJECTS = {
+  'summancer': {
+      title: 'Summancer',
+      type: ['proyecto-grafico', 'proyecto-web'],
+      linkPath: "https://adrian-gg.github.io/summancer/",
+      text_ES: `<p>Summancer es un juego de cartas aleatorias donde te conviertes en un Summancer, un ser con el poder de invocar criaturas cósmicas para enfrentarte en batallas rituales en busca de sabiduría y supremacía.</p><p>Tu objetivo es derribar la base enemiga, y para lograrlo, debes generar cartas con poder y efectos aleatorios, lo que garantiza que cada partida sea una experiencia única, llena de desafíos y estrategia. Sumérgete en este universo misterioso y descubre las maravillas del cosmos mientras te enfrentas a tus oponentes en batallas épicas.</p>`,
+      text_EN: `<p>Summancer is a random card game where you become a Summancer, a being with the power to summon cosmic creatures to engage in ritual battles in search of wisdom and supremacy.</p><p>Your objective is to overthrow the enemy base, and to achieve this, you must generate cards with random power and effects, which guarantees that each game is a unique experience, full of challenges and strategy. Immerse yourself in this mysterious universe and discover the wonders of the cosmos while facing your opponents in epic battles.</p>`,        
+      programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js', 'react'],
+      imgs: 9
+  },
   'wave': {
       title: 'Wave',
       type: ['proyecto-grafico'],
