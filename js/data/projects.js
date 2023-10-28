@@ -34,6 +34,15 @@ const PROJECTS = {
       text_EN: `<p>The Cosmere is the word that defines the universe in which many of Brandon Sanderson's books take place, being the systems that exist in this universe the setting for his stories.</p><p>This mini project is the recreation of the astral map of the constellations and the 7 <span class="texto--parentesis">(for the moment)</span> solar systems.</p><p>By interacting with each of them you can know the name and number of planets, their position and everything that is known to date.</p>`,
       programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js'],
       imgs: 2
+  },
+  'stl_app': {
+      title: 'Streamloots',
+      type: ['proyecto-web'],
+      linkPath: null,
+      text_ES: `<p>Streamloots es una startup dedicada a la venta de cartas digitales para interactuar con los streamers. Por medio de su plataforma, estos crean sus colecciones y las presentan a sus viewers, quienes pueden ser más activos en los directos al canjearlas.</p><p>Siendo una de las primeras empresas en las que he trabajado tuve la oportunidad de participar en su rebranding y con ello imaginar una versión de la plataforma más acorde a este.</p>`,
+      text_EN: `<p>Streamloots is a startup dedicated to selling digital cards to interact with streamers. Through its platform, they create their collections and present them to their viewers, who can be more active in live shows by redeeming them.</p><p>Being one of the first companies in which I have worked I had the opportunity to participate in its rebranding and thus imagine a version of the platform more in line with it.</p>`,
+      programs: ['xd', 'html', 'css', 'js', 'react'],
+      imgs: 6
   }, 
   'ladysibi': {
       title: 'LadySibi',
