@@ -275,7 +275,7 @@ $(document).ready(function(){
     });
 
     /* -- MODO TEMA -- */
-    var faceA = $(".faceA");
+    let faceA = $(".faceA");
     ContenedorGeneral.on('click', '.hobbie__icono-disenyo', function(){
       color++;        
       if(color > 6){ color = 0; }
@@ -306,10 +306,10 @@ $(document).ready(function(){
 
 
     /* -- MODO CHOCOLATE -- */
-    var mordiscos = 0;
-    var imgVec;
-    var mordiscoSound = new Audio('assets/audio/sounds/bite.mp3');
-    var Vmordiendo = false;
+    let mordiscos = 0;
+    let imgVec;
+    let mordiscoSound = new Audio('assets/audio/sounds/bite.mp3');
+    let Vmordiendo = false;
     ContenedorGeneral.on('click', '.hobbie__icono-chocolate', function(){
         if(Vmordiendo == false){
             Vmordiendo = true;
