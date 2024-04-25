@@ -1,13 +1,10 @@
 :root{
-	--bgc-background: #303030;
-    --bgc-background: #202020;
-    --ie-bgc-background: var(--bgc-background);
-    	--bgc-background-img: #3e3e3e;
-    --bgc-background-img: #2e2e2e;
-	--bgc-border: #515151;
-    --bgc-border: #333333;
-    --bgc-text-o: #989898;
-    --bgc-text: #f5f5f5;
+  --bgc-background: #202020;
+  --ie-bgc-background: var(--bgc-background);
+  --bgc-background-img: #2e2e2e;
+  --bgc-border: #333333;
+  --bgc-text-o: #989898;
+  --bgc-text: #f5f5f5;
 }
 
 .ARTI-about__yo-foto .yo-foto{

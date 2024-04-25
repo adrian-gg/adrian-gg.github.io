@@ -76,6 +76,7 @@ $(document).ready(function(){
     let elem = document.documentElement;
     ContenedorGeneral.on('click', '.hobbie__icono-cine', function(){
         $(".modo-cine").toggleClass("modo-cine--activo");
+        $("html").toggleClass("modo-cine--activo");
 
         if($(".modo-cine").hasClass("modo-cine--activo")){
             openFullscreen()
@@ -296,6 +297,7 @@ $(document).ready(function(){
       modoDisenyo[0].style.setProperty('--hscreen', (((buttonDisenyoPosition.top + (boxSize.h/2)) * 100) / screenSize.h).toFixed(2)+'%');
       modoDisenyo.addClass('modo-disenyo--open');
       body.addClass('modo-disenyo--open');
+      //comentar para editar ⬇
       setTimeout(()=>{
         modoDisenyo.removeClass('modo-disenyo--open');
         body.removeClass('modo-disenyo--open');
@@ -514,15 +516,26 @@ $(document).ready(function(){
       $(".ARTI-works__CONT-datos-proyecto .descripcion-titulo").empty().append(PROJECTS[proyecto].title);
       if(PROJECTS[proyecto].linkPath != null && device == "PC"){
           $(".ARTI-works__CONT-datos-proyecto .descripcion-titulo")
-          .append(`<a href="${PROJECTS[proyecto].linkPath}" target="_blank"><span class="ARTI-works__proyecto-link"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M8.28,30.599c-1.2-0.014-2.244-0.433-3.105-1.278   c-0.842-0.827-1.678-1.66-2.501-2.506c-1.677-1.723-1.7-4.452-0.012-6.16c2.831-2.864,5.678-5.71,8.542-8.54   c1.743-1.722,4.481-1.685,6.22,0.037c0.405,0.401,0.811,0.799,1.204,1.211c0.543,0.569,0.544,1.42,0.016,1.947   c-0.533,0.531-1.376,0.533-1.947-0.01c-0.402-0.383-0.783-0.788-1.181-1.175c-0.734-0.713-1.723-0.722-2.45,0.002   c-2.803,2.792-5.601,5.591-8.395,8.393c-0.697,0.699-0.693,1.716,0.001,2.424c0.777,0.793,1.563,1.579,2.356,2.355   c0.79,0.772,1.75,0.761,2.542-0.026c1.447-1.439,2.888-2.885,4.331-4.328c0.421-0.421,0.916-0.569,1.483-0.372   c0.554,0.192,0.849,0.604,0.904,1.183c0.039,0.41-0.093,0.769-0.382,1.06c-1.55,1.552-3.088,3.117-4.662,4.645   C10.434,30.244,9.415,30.587,8.28,30.599z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M30.595,8.273c-0.011,1.183-0.387,2.227-1.215,3.061   c-2.856,2.878-5.709,5.76-8.604,8.598c-1.724,1.69-4.492,1.617-6.2-0.08c-0.394-0.392-0.792-0.779-1.177-1.18   c-0.563-0.586-0.565-1.445-0.015-1.977c0.541-0.523,1.377-0.51,1.946,0.039c0.389,0.376,0.763,0.769,1.152,1.146   c0.731,0.709,1.742,0.732,2.457,0.021c2.814-2.802,5.622-5.611,8.423-8.426c0.655-0.659,0.677-1.661,0.04-2.33   c-0.824-0.864-1.669-1.708-2.531-2.535c-0.681-0.653-1.691-0.6-2.393,0.097c-1.447,1.439-2.885,2.889-4.332,4.329   c-0.634,0.632-1.519,0.649-2.065,0.055c-0.479-0.521-0.507-1.34-0.001-1.853c1.56-1.582,3.101-3.185,4.724-4.701   c1.696-1.584,4.332-1.49,6.002,0.128c0.857,0.831,1.7,1.677,2.534,2.532C30.172,6.053,30.579,7.089,30.595,8.273z"/></g><rect fill-rule="evenodd" clip-rule="evenodd" fill="none" width="32" height="32"/></svg></span></a>`);
+          .append(`
+          <a href="${PROJECTS[proyecto].linkPath}" target="_blank">
+            <span class="ARTI-works__proyecto-link">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M8.28,30.599c-1.2-0.014-2.244-0.433-3.105-1.278   c-0.842-0.827-1.678-1.66-2.501-2.506c-1.677-1.723-1.7-4.452-0.012-6.16c2.831-2.864,5.678-5.71,8.542-8.54   c1.743-1.722,4.481-1.685,6.22,0.037c0.405,0.401,0.811,0.799,1.204,1.211c0.543,0.569,0.544,1.42,0.016,1.947   c-0.533,0.531-1.376,0.533-1.947-0.01c-0.402-0.383-0.783-0.788-1.181-1.175c-0.734-0.713-1.723-0.722-2.45,0.002   c-2.803,2.792-5.601,5.591-8.395,8.393c-0.697,0.699-0.693,1.716,0.001,2.424c0.777,0.793,1.563,1.579,2.356,2.355   c0.79,0.772,1.75,0.761,2.542-0.026c1.447-1.439,2.888-2.885,4.331-4.328c0.421-0.421,0.916-0.569,1.483-0.372   c0.554,0.192,0.849,0.604,0.904,1.183c0.039,0.41-0.093,0.769-0.382,1.06c-1.55,1.552-3.088,3.117-4.662,4.645   C10.434,30.244,9.415,30.587,8.28,30.599z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M30.595,8.273c-0.011,1.183-0.387,2.227-1.215,3.061   c-2.856,2.878-5.709,5.76-8.604,8.598c-1.724,1.69-4.492,1.617-6.2-0.08c-0.394-0.392-0.792-0.779-1.177-1.18   c-0.563-0.586-0.565-1.445-0.015-1.977c0.541-0.523,1.377-0.51,1.946,0.039c0.389,0.376,0.763,0.769,1.152,1.146   c0.731,0.709,1.742,0.732,2.457,0.021c2.814-2.802,5.622-5.611,8.423-8.426c0.655-0.659,0.677-1.661,0.04-2.33   c-0.824-0.864-1.669-1.708-2.531-2.535c-0.681-0.653-1.691-0.6-2.393,0.097c-1.447,1.439-2.885,2.889-4.332,4.329   c-0.634,0.632-1.519,0.649-2.065,0.055c-0.479-0.521-0.507-1.34-0.001-1.853c1.56-1.582,3.101-3.185,4.724-4.701   c1.696-1.584,4.332-1.49,6.002,0.128c0.857,0.831,1.7,1.677,2.534,2.532C30.172,6.053,30.579,7.089,30.595,8.273z"/></g><rect fill-rule="evenodd" clip-rule="evenodd" fill="none" width="32" height="32"/></svg>
+            </span>
+          </a>`);
       }
       $(".ARTI-works__CONT-datos-proyecto .descripcion-texto.lang-ES").empty().append(PROJECTS[proyecto].text_ES);
       $(".ARTI-works__CONT-datos-proyecto .descripcion-texto.lang-EN").empty().append(PROJECTS[proyecto].text_EN);
       
       for(let i = 0; i < PROJECTS[proyecto].programs.length; i++){
-          prog = PROJECTS[proyecto].programs[i];
-          $(".programas__CONT-programas").append(programas[prog]);
-
+        let progKey = PROJECTS[proyecto].programs[i];
+        $(".programas__CONT-programas").append(
+          `<div class="programa programa__${progKey}">
+            <div class="programa__icono programa__icono-${progKey}">
+              ${PROGRAMS[progKey].icon}
+            </div>
+            <p class="programa__titulo-${progKey}">${PROGRAMS[progKey].name}</p>
+          </div>`
+        );
       }
 
       $parent.parents('#ARTI-works').find('.slidesjs-control').css('pointer-events', 'none');

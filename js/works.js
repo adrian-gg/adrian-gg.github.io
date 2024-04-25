@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 /* ============================== WORKS ============================== */
 
-    /* -- FILTRO GALERÍA -- */
-    $('#CONTENEDOR-PAGINAS').on('click', '.MENU-galeria__proyectos-opcion', function(){
+    // -- FILTRO GALERÍA -- 
+  /*   $('#CONTENEDOR-PAGINAS').on('click', '.MENU-galeria__proyectos-opcion', function(){
       const $este = $(this);
       const opcion = $este.data('opcion');
       const $parent = $este.parents('#ARTI-works');
@@ -35,11 +35,11 @@ $(document).ready(function(){
           },600);
 
       }
-  });
+  }); */
 
 
-  /* -- ABRIR UN PROYECTO -- */
-  let proyecto;
+  // -- ABRIR UN PROYECTO --
+  /* let proyecto;
   const cargarSlides = function() {
       $("#slides").slidesjs({ pagination: false, navigation: { effect: "fade", active: false }, effect: { fade: { speed: 400 } } });       
   };
@@ -79,9 +79,9 @@ $(document).ready(function(){
       $(".ARTI-works__CONT-datos-proyecto .descripcion-texto.lang-EN").empty().append(proyectos[proyecto].text_EN);
       
       for(let i = 0; i < proyectos[proyecto].programs.length; i++){
-          prog = proyectos[proyecto].programs[i];
-          $(".programas__CONT-programas").append(programas[prog]);
-
+          let prog = proyectos[proyecto].programs[i];
+          console.log(prog)
+          $(".programas__CONT-programas").append(programas[prog]?.icon);
       }
 
       $parent.parents('#ARTI-works').find('.slidesjs-control').css('pointer-events', 'none');
@@ -145,7 +145,7 @@ $(document).ready(function(){
   });
 
 
-  /* -- AMPLIAR IMAGEN PROYECTO -- */
+  // -- AMPLIAR IMAGEN PROYECTO --
   $("body").on("click", ".container .proyecto-imagenes", function(){
       
       const imagenSelect = $(this).css('background-image');
@@ -190,7 +190,7 @@ $(document).ready(function(){
   $("body").on("click", ".CONT-proyecto-imagen--selecionada-zoom .slidesjs-container", function(){
       $('.CONT-proyecto-imagen--selecionada-zoom').removeClass('imagen-zoom--open');
       $('.MENU-principal__icono-menu, .MENU-principal__CONT-icono-scroll').removeClass('MENU-imagen-zoom--open');
-  });
+  }); */
 
 
 });
