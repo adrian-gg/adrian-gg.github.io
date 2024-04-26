@@ -1975,6 +1975,11 @@ MEDIA QUERIES
   .modo-cine{
     display: none;
   }
+  .hobbie__icono-musica,
+  .hobbie__icono-cine
+  {
+    pointer-events: none;
+  }
 
 
   /*------------------ ABOUT ------------------*/

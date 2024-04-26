@@ -30,6 +30,7 @@ $(document).ready(function(){
             success: function(data){
 
               ContenedorPaginas.html(data);
+              ContenedorGeneral.removeClass("modo-code--activo");
 
                 if(pagina == 'works' || pagina == 'about'){
                     $('#MENU-principal').removeClass('MENU-principal--inicio');
@@ -75,15 +76,9 @@ $(document).ready(function(){
     /* -- MODO CINE -- */
     let elem = document.documentElement;
     ContenedorGeneral.on('click', '.hobbie__icono-cine', function(){
-        $(".modo-cine").toggleClass("modo-cine--activo");
-        $("html").toggleClass("modo-cine--activo");
-
-        if($(".modo-cine").hasClass("modo-cine--activo")){
-            openFullscreen()
-        }else{
-            closeFullscreen()
-        }
+      setCine()
     });
+    
     /* View in fullscreen */
     function openFullscreen() {
         if (elem.requestFullscreen) {
@@ -103,6 +98,24 @@ $(document).ready(function(){
         } else if (document.msExitFullscreen) { /* IE11 */
         document.msExitFullscreen();
         }
+    }
+    function setCine(remove = false) {
+      if(!remove) {
+        $(".modo-cine").toggleClass("modo-cine--activo");
+        $("html").toggleClass("modo-cine--activo");
+
+        if($(".modo-cine").hasClass("modo-cine--activo")){
+            openFullscreen()
+        }else{
+            closeFullscreen()
+        }
+
+      }else {
+        $(".modo-cine").removeClass("modo-cine--activo");
+        $("html").removeClass("modo-cine--activo");
+        closeFullscreen()
+      }
+
     }
 
         
@@ -203,8 +216,7 @@ $(document).ready(function(){
       contadorSec = 0;        
       cancion.pause();
       numCancion--
-      if(numCancion >= SONGS.length){ numCancion = 0 }
-      if(numCancion < 0){numCancion = SONGS.name-1 }
+      if(numCancion < 0){ numCancion = numCancion = SONGS.length-1 }
       duracionC = SONGS[numCancion].duration;
       $('.rrss-faces--play').empty().append('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1540 -118)"><g transform="translate(1551.286 126.286)"><rect width="8" height="28" rx="1" transform="translate(-0.286 -0.286)"/><rect width="8" height="28" rx="1" transform="translate(14.714 -0.286)"/></g><rect width="44" height="44" transform="translate(1540 118)" fill="none"/></g></svg>');
       cargarCancion();
@@ -219,8 +231,7 @@ $(document).ready(function(){
       contadorSec = 0;        
       cancion.pause();        
       numCancion++
-      if(numCancion >= 5){ numCancion = 0 }
-      if(numCancion < 0){numCancion = 4 }
+      if(numCancion >= SONGS.length){ numCancion = 0 }
       duracionC = SONGS[numCancion].duration;
       $('.rrss-faces--play').empty().append('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><g transform="translate(-1540 -118)"><g transform="translate(1551.286 126.286)"><rect width="8" height="28" rx="1" transform="translate(-0.286 -0.286)"/><rect width="8" height="28" rx="1" transform="translate(14.714 -0.286)"/></g><rect width="44" height="44" transform="translate(1540 118)" fill="none"/></g></svg>');
       cargarCancion();
@@ -268,7 +279,9 @@ $(document).ready(function(){
     }
 
     /* -- MODO PUZLES -- */
-      //link
+    ContenedorGeneral.on('click', '.hobbie__icono-puzles', function(event){
+      setCine(true)
+    });
 
     /* -- MODO CODE -- */
     ContenedorGeneral.on('click', '.hobbie__icono-code', function(){
