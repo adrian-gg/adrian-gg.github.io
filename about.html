@@ -80,15 +80,6 @@
                         <p>Hi, I'm Adrian Garcia, a graphic designer and front-end web developer who is always ready to experiment and learn from every challenge.</p><p>I consider myself a demanding person who embraces feedback as a tool to grow professionally <span class="texto--parentesis">(I live from it)</span>. Every new project, from small applications to complex challenges, I face it with enthusiasm and optimism, always looking to learn new things and improve my skills.</p><p>Passionate about technology and design, I stand out for my ability to create and maintain attractive and interactive websites, guided by my focus on understanding users.</p>
                     </div>
 
-                    <!-- <div class="ARTI-about__yo-estudios lang-ES">
-                        <h4 class="estudios-titulo">Estudios</h4>
-                        <p>Los primeros años de mi educación los dediqué…. bueno, a muchas cosas, pero encontré el diseño gráfico, que era muy similar a lo que dedicaba gran parte de mi tiempo <span class="texto--parentesis">(trastear con los programas de adobe)</span></p><p>Durante este creativo periodo me introduje en el mundo del diseño web y como me quedé con hambre de más, decidí especializarme.</p><p>A día de hoy puedo decir que me encanta lo que hago, y mientras sigo dedicando tiempo a mi formación, siempre estoy preparado para nuevos retos.</p>
-                    </div>
-                    <div class="ARTI-about__yo-estudios lang-EN">
-                        <h4 class="estudios-titulo">Studies</h4>
-                        <p>The first years of my education I dedicated.... well, to many things, but I found graphic design, which was very similar to what I spent most of my time <span class="texto--parentesis">(tinkering with adobe programs)</span></p><p>During this creative period I was introduced to the world of web design and as I was hungry for more, I decided to specialize.</p><p>To this day I can say that I love what I do, and while I continue to dedicate time to my training, I am always ready for new challenges.</p>
-                    </div> -->
-
                     <div class="ARTI-about__yo-experiencias">
                         <h4 class="experiencias-titulo lang-ES">Experiencia <span class="texto--parentesis">(+3 años)</span></h4>
                         <h4 class="experiencias-titulo lang-EN">Experience <span class="texto--parentesis">(+3 years)</span></h4>
@@ -126,15 +117,15 @@
             const hobbiesBox = $('.hobbies__CONT-hobbies');
             const hobbiesKeys = Object.keys(HOBBIES);
             
-            const programsBox = $('.programas__CONT-programas');
-            const programsKeys = ['html', 'css', 'tailwind', 'js', 'jquery', 'ts', 'react', 'zustand', 'wordpress', 'mysql', 'git', 'github', 'npm', 'pnpm', 'vite', 'figma', 'xd', 'illustrator', 'photoshop', 'after_efects', 'premiere_pro', 'indesign'];
-            //const programsKeys = Object.keys(PROGRAMS);
+            const programsBox = $('.programas__CONT-programas')
+            const programsKeys = ['html', 'css', 'tailwind', 'js', 'jquery', 'ts', 'react', 'zustand', 'wordpress', 'mysql', 'git', 'github', 'npm', 'pnpm', 'vite', 'figma', 'xd', 'illustrator', 'photoshop', 'after_efects', 'premiere_pro', 'indesign']
+            //const programsKeys = Object.keys(PROGRAMS)
             
-            const experienceBox = $('.experiencias__CONT-experiencias');
-            const experienceKeys = Object.keys(EXPERIENCE);
+            const experienceBox = $('.experiencias__CONT-experiencias')
+            const experienceKeys = Object.keys(EXPERIENCE)
 
-            const studiesBox = $('.estudios__CONT-estudios');
-            const studiesKeys = Object.keys(STUDIES);
+            const studiesBox = $('.estudios__CONT-estudios')
+            const studiesKeys = Object.keys(STUDIES)
             
             
             faceBBox.append(`<img src="assets/images/covers/${imageCover}" alt="Choke" class="yo-foto">`)
@@ -149,7 +140,7 @@
                   <p class="hobbie__titulo-${hobbie} lang-ES">${HOBBIES[hobbie].name_ES}</p>
                   <p class="hobbie__titulo-${hobbie} lang-EN">${HOBBIES[hobbie].name_EN}</p>
                 </div>`
-              );
+              )
             }
 
             for(let i = 0; i < programsKeys.length; i++){
@@ -160,7 +151,7 @@
                   </div>
                   <p class="programa__titulo-${programsKeys[i]}">${PROGRAMS[programsKeys[i]].name}</p>
                 </div>`
-              );
+              )
             }
 
             for(let i = 0; i < experienceKeys.length; i++){
@@ -177,7 +168,7 @@
                     <p class="experiencia__info experiencia__info_fecha lang-EN"><span class="texto--parentesis">${EXPERIENCE[experienceKeys[i]].date_EN}</span></p>
                   </div>
                 </div>`
-              );
+              )
             }
 
             for(let i = 0; i < studiesKeys.length; i++){
@@ -194,7 +185,7 @@
                     <p class="estudio__info estudio__info_fecha lang-EN"><span class="texto--parentesis">${STUDIES[studiesKeys[i]].date_EN}</span></p>
                   </div>
                 </div>`
-              );
+              )
             }
 
           });

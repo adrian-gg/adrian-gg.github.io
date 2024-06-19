@@ -1,4 +1,4 @@
-const PROJECTS = {
+const PROJECTS = {  
   'nsmb_minigames': {
     title: 'New Super Mario Bros. Minigames',
     type: ['proyecto-web'],

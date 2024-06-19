@@ -60,19 +60,19 @@
 
     <script>
         $(document).ready(function(){
-            let projectsKeys = Object.keys(PROJECTS);
+            let projectsKeys = Object.keys(PROJECTS)
             
             for(var i = 0; i < projectsKeys.length; i++){
-                let typeProject = PROJECTS[projectsKeys[i]].type.join(' ');
-                $('.ARTI-works__CONT-proyecto-imagen').append(
-                    `<div class="CONT-proyecto-imagen ${typeProject}" data-proyecto="${projectsKeys[i]}">
-                        <span class="proyecto-nombre"><h5>${PROJECTS[projectsKeys[i]].title}</h5></span>
-                        <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.png" alt="Imagen con fondo transparente del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen">
-                        <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.jpg" alt="Imagen del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen-color">
-                    </div>`
-                );
-                
+              let typeProject = PROJECTS[projectsKeys[i]].type.join(' ')
+
+              $('.ARTI-works__CONT-proyecto-imagen').append(
+                `<div class="CONT-proyecto-imagen ${typeProject}" data-proyecto="${projectsKeys[i]}">
+                  <span class="proyecto-nombre"><h5>${PROJECTS[projectsKeys[i]].title}</h5></span>
+                  <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.png" alt="Imagen con fondo transparente del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen">
+                  <img src="assets/images/projects/${projectsKeys[i]}/portada_-_${projectsKeys[i]}.jpg" alt="Imagen del logotipo del proyecto ${projectsKeys[i]}" class="proyecto-imagen-color">
+                </div>`
+              )
             }
-        });
+        })
     </script>
 </body>
