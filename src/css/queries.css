@@ -1,0 +1,275 @@
+/*
+ * ===================================================================
+ * -- MEDIA QUERIES --------------------------------------------------
+ * ===================================================================
+ */
+
+/* == MEDIA QUERY (LARGE PC) ========================================= */
+@media screen and (min-width: 1024px) {
+  /* html{ font-size: 1.13vmin!important; } */
+
+  /* -- Modes -------------------------------------------------------- */
+  .music-mode--on .MENU__icon--menu {
+    transform: translateX(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+
+  .music-mode--on .MENU__icon--menu span:nth-child(1),
+  .music-mode--on .MENU__icon--menu span:nth-child(3) {
+    width: 3rem;
+    top: 50%;
+    left: 50%;
+  }
+
+  .music-mode--on .MENU__icon--menu span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .music-mode--on .MENU__icon--menu span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .music-mode--on .MENU__icon--menu span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .music-mode--on .MENU__icon--scroll span {
+    animation: none;
+  }
+
+  .music-mode--on .MENU__icon--scroll span:nth-child(1),
+  .music-mode--on .MENU__icon--scroll span:nth-child(2) {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateX(0rem) rotate(0deg);
+  }
+}
+
+/* == MEDIA QUERY (PC) =============================================== */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 1.23vmin !important;
+  }
+
+  /* -- Menu --------------------------------------------------------- */
+  .MENU-main {
+    height: 90%;
+    align-items: center;
+  }
+
+  .MENU__CONT-icon .MENU__icon--menu {
+    left: 50%;
+  }
+
+  .MENU__CONT-options {
+    height: 100%;
+    border: none;
+  }
+
+  .MENU-main__options {
+    margin-bottom: 40px;
+  }
+
+  .MENU__CONT-icon .MENU__icon--scroll,
+  .MENU__CONT-icon .MENU__icon--language {
+    left: 50%;
+  }
+
+  /* -- Modes -------------------------------------------------------- */
+  .movies-mode {
+    display: none;
+  }
+
+  [data-hobbies='music'] .tag-block__icon,
+  [data-hobbies='movies'] .tag-block__icon {
+    pointer-events: none;
+  }
+
+  /* -- About -------------------------------------------------------- */
+  #ARTI-about .CONT-section:has(.CONT-card-block) {
+    display: none;
+  }
+
+  #ARTI-about .CONT-section {
+    width: 100%;
+    height: 70dvh;
+    margin-top: 4.6rem;
+    margin-bottom: 4.6rem;
+  }
+
+  #ARTI-about .section {
+    height: 100%;
+  }
+
+  /* -- Works -------------------------------------------------------- */
+  #ARTI-projects {
+    height: 75dvh;
+    overflow-y: hidden;
+    display: block;
+  }
+
+  #ARTI-projects
+    > .simplebar-wrapper
+    > .simplebar-mask
+    > .simplebar-offset
+    > .simplebar-content-wrapper
+    > .simplebar-content {
+    display: block;
+  }
+
+  #ARTI-projects .CONT-section--left {
+    margin: 0;
+    height: 75dvh;
+  }
+
+  .ARTI-projects--open .projects {
+    height: 75dvh;
+  }
+
+  .projects-images {
+    grid-template-columns: repeat(3, minmax(1.6rem, 1fr));
+  }
+
+  .projects {
+    height: initial;
+  }
+
+  .project--opened .projects {
+    max-width: 51.2rem;
+    height: 100% !important;
+  }
+
+  #ARTI-projects .CONT-section--right {
+    width: 100%;
+    position: initial;
+  }
+
+  #ARTI-projects .CONT-section--right .section {
+    height: auto;
+  }
+
+  .simplebar-content {
+    height: 100%;
+  }
+
+  #ARTI-projects .project--opened {
+    width: 100%;
+  }
+
+  #ARTI-projects.ARTI-projects--open
+    > .simplebar-wrapper
+    > .simplebar-mask
+    > .simplebar-offset
+    > .simplebar-content-wrapper {
+    overflow: scroll !important;
+  }
+
+  .selected-project-images .image-project {
+    pointer-events: none;
+  }
+
+  #ARTI-projects.ARTI-projects--open .selected-project-images .image-project {
+    pointer-events: initial;
+  }
+
+  .project--opened .simplebar-content-wrapper {
+    overflow: initial !important;
+  }
+
+  .MENU-galeria__proyectos-opcion:hover {
+    opacity: 1;
+  }
+
+  /* -- Contact ------------------------------------------------------ */
+  #ARTI-contact .CONT-section:has(.CONT-card-block) {
+    display: none;
+  }
+
+  #ARTI-contact .CONT-section {
+    width: 100%;
+  }
+
+  /* -- Scroll ------------------------------------------------------- */
+  .simplebar-vertical,
+  .slidesjs-navigation {
+    display: none;
+  }
+
+  .simplebar-content {
+    height: 100%;
+  }
+
+  /* -- Components --------------------------------------------------- */
+  .subsection-block:last-child {
+    margin-bottom: 26px;
+  }
+}
+
+/* == MEDIA QUERY (TABLET) =========================================== */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 1.23vmax !important;
+  }
+
+  /* -- Pages -------------------------------------------------------- */
+  #PAGES-CONTAINER {
+    height: initial;
+  }
+
+  /* -- Works -------------------------------------------------------- */
+  .projects-images {
+    grid-template-columns: repeat(3, minmax(1.6rem, 1fr));
+  }
+}
+
+/* == MEDIA QUERY (MOBILE) =========================================== */
+@media screen and (max-width: 425px) {
+  /* -- About -------------------------------------------------------- */
+  .card-block__description .face--front {
+    font-size: var(--fz-h4);
+  }
+
+  section.CONT-section {
+    width: 100%;
+    height: 75dvh;
+    margin-top: 4.6rem;
+    margin-bottom: 4.6rem;
+  }
+
+  .CONT-data {
+    width: 96%;
+  }
+
+  /* -- Works -------------------------------------------------------- */
+  .projects {
+    width: 96%;
+  }
+
+  .projects-images {
+    grid-template-columns: repeat(2, minmax(1.6rem, 1fr));
+  }
+
+  /* -- Contact ------------------------------------------------------ */
+  #ARTI-contact section.CONT-section {
+    height: initial;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  html {
+    font-size: 9px !important;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  /* .CONT-form-block {
+    align-items: flex-end;
+  } */
+
+  /* -- Menu --------------------------------------------------------- */
+  .MENU-main {
+    opacity: 0;
+  }
+}

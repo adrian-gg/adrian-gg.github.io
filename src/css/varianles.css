@@ -1,0 +1,122 @@
+/*
+ * ===================================================================
+ * -- VARIABLES ------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  /* -- Colors -- */
+  --white: #ffffff;
+  --black: black;
+  --grey-d30: #202020;
+  --grey-d20: #2e2e2e;
+  --grey-d10: #333333;
+  --grey: #808080;
+  --grey-l05: #8b8b8b;
+  --grey-l10: #989898;
+  --grey-l20: #d3d3d3;
+  --grey-l30: #f5f5f5;
+  --red: #ff5656;
+  --orange: #ff5733;
+
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --grey-d30-rgb: 32, 32, 32;
+  --grey-d20-rgb: 46, 46, 46;
+  --grey-d10-rgb: 51, 51, 51;
+  --grey-rgb: 128, 128, 128;
+  --grey-l05-rgb: 139, 139, 139;
+  --grey-l10-rgb: 152, 152, 152;
+  --grey-l20-rgb: 211, 211, 211;
+  --grey-l30-rgb: 245, 245, 245;
+  --red-rgb: 255, 86, 86;
+  --orange-rgb: 255, 87, 51;
+
+  --bgc-primary: var(--grey-d30);
+  --bgc-secondary: var(--grey-d20);
+  --bgc-tertiary: var(--grey-d10);
+  --bd-primary: var(--grey-d10);
+  --bd-secondary: var(--grey);
+  --bd-tertiary: var(--grey-l20);
+  --c-primary: var(--grey-l30);
+  --c-secondary: var(--grey-l10);
+  --c-tertiary: var(--grey-l05);
+  --input-error: var(--red);
+  --code-mode: var(--orange);
+
+  --bgc-primary-rgb: var(--grey-d30-rgb);
+  --bgc-secondary-rgb: var(--grey-d20-rgb);
+  --bgc-tertiary-rgb: var(--grey-d10-rgb);
+  --bd-primary-rgb: var(--grey-d10-rgb);
+  --bd-secondary-rgb: var(--grey-rgb);
+  --bd-tertiary-rgb: var(--grey-l20-rgb);
+  --c-primary-rgb: var(--grey-l30-rgb);
+  --c-secondary-rgb: var(--grey-l20-rgb);
+  --c-tertiary-rgb: var(--grey-l05-rgb);
+  --input-error-rgb: var(--red-rgb);
+  --code-mode-rgb: var(--orange-rgb);
+
+  --color-link: var(--c-primary);
+
+  /*   --bgc-background: #202020;
+  --ie-bgc-background: var(--bgc-background);
+  --bgc-background-img: #2e2e2e;
+  --bgc-border: #333333;
+  --bgc-text-o: #989898;
+  --bgc-text: #f5f5f5; */
+
+  /* --bgc-white: white;
+  --bgc-black: black;
+  --bgc-grey: grey;
+  --bgc-lightgrey: lightgrey; */
+
+  /* --bgc-background-rgb: 32, 32, 32;
+  --bgc-text-rgb: 245, 245, 245; */
+
+  /* -- Fonts -- */
+  /* --ff-heder: 'Lato', sans-serif; */
+  /* --ff-text-n: 'Roboto', sans-serif; */
+  /* --ff-text-sb: 'Roboto semibold', sans-serif; */
+  --font-lato: 'Lato', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --ff-primary: var(--font-lato);
+  --ff-secondary: var(--font-roboto);
+
+  --fz-h1: 3.7rem;
+  --fz-h2: 3.2rem;
+  --fz-h3: 2.2rem;
+  --fz-h4: 2rem;
+  --fz-h5: 1.8rem;
+  --fz-h6: 1.6rem;
+  --fz-overline: 1.8rem;
+  --fz-text: 1.6rem;
+  --fz-text-s: 1.4rem;
+
+  --fw-regular: 400;
+  --fw-semibold: 500;
+  --fw-bold: 700;
+
+  --f-h1: normal var(--fw-bold) var(--fz-h1) var(--ff-primary);
+  --f-h2: normal var(--fw-bold) var(--fz-h2) var(--ff-primary);
+  --f-h3: normal var(--fw-bold) var(--fz-h3) var(--ff-primary);
+  --f-h4: normal var(--fw-bold) var(--fz-h4) var(--ff-primary);
+  --f-h5: normal var(--fw-bold) var(--fz-h5) var(--ff-primary);
+  --f-h6: normal var(--fw-bold) var(--fz-h6) var(--ff-primary);
+  --f-overline: normal var(--fw-semibold) var(--fz-overline) var(--ff-secondary);
+  --f-text: normal var(--fw-regular) var(--fz-text) var(--ff-secondary);
+  --f-text-s: normal var(--fw-regular) var(--fz-text-s) var(--ff-secondary);
+
+  --bgc1: #ff6961;
+  --bgc2: #ffb480;
+  --bgc3: #f8f38d;
+  --bgc4: #42d6a4;
+  --bgc5: #08cad1;
+  --bgc6: #59adf6;
+  --bgc7: #9d94ff;
+  --bgc8: #c780e8;
+  /*--bgi1: url('../assets/images/webs/web1.png');
+  --bgi2: url('../assets/images/webs/web2.png');
+  --bgi3: url('../assets/images/webs/web3.png');
+  --bgi4: url('../assets/images/webs/web4.png');
+  --bgi5: url('../assets/images/webs/web5.png');*/
+}

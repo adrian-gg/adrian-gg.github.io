@@ -1,0 +1,35 @@
+<body>
+  <article id="ARTI-projects" data-simplebar>
+    <section class="CONT-section CONT-section--left" data-simplebar>
+      <nav id="MENU-filter" class="MENU-filter">
+        <ul class="MENU-filter__options"></ul>
+      </nav>
+
+      <div class="projects">
+        <div class="selected-project__CONT-image">
+          <div class="selected-project-image"></div>
+
+          <!-- SLIDER -->
+          <div class="selected-project__slides container">
+            <div class="selected-project-images CONT-proyecto-imagenes"></div>
+            <!-- <div id="slides"></div> -->
+          </div>
+        </div>
+
+        <div class="projects-images"></div>
+      </div>
+    </section>
+
+    <section class="CONT-section CONT-section--right">
+      <div class="section" data-simplebar>
+        <div class="selected-project-data"></div>
+      </div>
+    </section>
+  </article>
+
+  <script>
+    $(document).ready(function () {
+      printContent(PAGE_CONTENT.projects);
+    });
+  </script>
+</body>

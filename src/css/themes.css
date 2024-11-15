@@ -1,0 +1,115 @@
+/* -- Theme 0 -- */
+:root:has([data-theme='0']) {
+  --bgc-primary: #202020;
+  --bd-primary: #333333;
+  --c-primary: #f5f5f5;
+  --c-secondary: #989898;
+}
+[data-theme='0'] .card-block__picture {
+  background-color: transparent !important;
+}
+[data-theme='0'] .card-block__picture .picture {
+  mix-blend-mode: initial !important;
+}
+
+/* -- Theme 1 -- */
+:root:has([data-theme='1']) {
+  --bgc-primary: #f5f5f5;
+  --bd-primary: #d8d8d8;
+  --c-primary: #303030;
+  --c-secondary: #989898;
+}
+[data-theme='1'] .card-block__picture {
+  background-color: transparent !important;
+}
+[data-theme='1'] .card-block__picture .picture {
+  mix-blend-mode: initial !important;
+}
+
+
+/* -- Theme 2 -- */
+:root:has([data-theme='2']) {
+  --bgc-primary: #fecdd3;
+  --bd-primary: #b2a6ff8c;
+  --c-primary: #4224f4;
+  --c-secondary: #4224f48c;
+  --code-mode: #bb00ff;
+}
+
+[data-theme='2'] .card-block__picture .picture {
+  opacity: 0.7;
+}
+[data-theme='2'] .card-block__picture {
+  filter: saturate(2);
+}
+
+
+/* -- Theme 3 -- */
+:root:has([data-theme='3']) {
+  --bgc-primary: #1e3265;
+  --bd-primary: #ff643845;
+  --c-primary: #ff6438;
+  --c-secondary: #ff64388c;
+  --code-mode: #15aeff;
+}
+
+[data-theme='3'] .card-block__picture {
+  filter: saturate(0.9);
+}
+
+[data-theme='3'] .card-block__picture .picture {
+  mix-blend-mode: multiply !important;
+}
+
+/* -- Theme 4 -- */
+:root:has([data-theme='4']) {
+  --bgc-primary: #87f8fe;
+  --bd-primary: #7332c045;
+  --c-primary: #7332c0;
+  --c-secondary: #7332c08c;
+  --code-mode: #0077ff;
+}
+
+[data-theme='4'] .card-block__picture .picture {
+  opacity: 0.6;
+}
+[data-theme='4'] .card-block__picture {
+  filter: saturate(2);
+}
+
+/* -- Theme 5 -- */
+:root:has([data-theme='5']) {
+  --bgc-primary: #ffcc00;
+  --bd-primary: #00339945;
+  --c-primary: #003399;
+  --c-secondary: #0033998c;
+  --code-mode: #ff7813;
+}
+
+[data-theme='5'] .card-block__picture .picture {
+  opacity: 0.5;
+}
+
+[data-theme='5'] .card-block__picture {
+  filter: saturate(1.5);
+}
+
+/* -- Theme 6 -- */
+:root:has([data-theme='6']) {
+  --bgc-primary: #71df6e;
+  --bd-primary: #21236645;
+  --c-primary: #212366;
+  --c-secondary: #2123668c;
+  --code-mode: #ffffff;
+}
+
+[data-theme='6'] .card-block__picture .picture {
+  opacity: 0.6;
+}
+[data-theme='6'] .card-block__picture {
+  filter: saturate(2);
+}
+
+/* [data-theme='6'] .card-block__picture .picture {
+  mix-blend-mode: luminosity !important;
+} */

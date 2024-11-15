@@ -1,0 +1,30 @@
+<body>
+  <article id="ARTI-contact">
+    <section class="CONT-section">
+      <div class="section">
+        <div class="CONT-card-block"></div>
+      </div>
+    </section>
+
+    <section class="CONT-section">
+      <div class="section">
+        <div class="CONT-form-block"></div>
+      </div>
+    </section>
+  </article>
+
+  <script>
+    $(document).ready(function () {
+      printContent(PAGE_CONTENT.contact);
+
+      // Handle changes
+      $('body').on(
+        'change',
+        '#name, #email, #subject, #message',
+        function (event) {
+          $(this).removeClass('input--error');
+        }
+      );
+    });
+  </script>
+</body>

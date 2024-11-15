@@ -1,0 +1,124 @@
+/*
+ * ===================================================================
+ * -- GLOBAL STYLES --------------------------------------------------
+ * ===================================================================
+ */
+
+html {
+  font-size: 1.28vmin;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--bgc-primary, #202020);
+  overflow: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--c-primary);
+}
+
+h1 {
+  font: var(--f-h1);
+}
+h2 {
+  font: var(--f-h2);
+}
+h3 {
+  font: var(--f-h3);
+}
+h4 {
+  font: var(--f-h4);
+}
+h5 {
+  font: var(--f-h5);
+}
+h6 {
+  font: var(--f-h6);
+}
+
+p {
+  font: var(--f-text);
+  line-height: 2.4rem;
+}
+
+.overline {
+  font: var(--f-overline);
+  text-transform: uppercase;
+}
+
+b {
+  font-family: var(--ff-text);
+  font-weight: var(--fw-semibold);
+}
+
+span.parenthesis {
+  color: var(--c-secondary);
+}
+
+svg,
+.svg {
+  color: var(--c-primary);
+}
+
+/*
+ * ===================================================================
+ * -- SCROLL ---------------------------------------------------------
+ * ===================================================================
+ */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transpatent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transpatent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transpatent;
+}
+
+#ARTI-about .simplebar-content-wrapper {
+  scroll-behavior: smooth;
+}
+
+/* -- simplebar scroll -- */
+
+.simplebar-wrapper,
+.simplebar-mask,
+.simplebar-content-wrapper {
+  /* overflow: initial!important; */
+  background: transparent;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 1.6px !important;
+  background-color: var(--bd-primary);
+}
+
+.simplebar-scrollbar:before {
+  border-radius: 0 !important;
+  left: 0px !important;
+  right: 0px !important;
+  opacity: 1 !important;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color: var(--c-primary);
+  top: 0px !important;
+  bottom: 0px !important;
+}

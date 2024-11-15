@@ -1,0 +1,296 @@
+#MAIN-CONTAINER {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  transition: opacity 2s;
+}
+
+/*
+ * ===================================================================
+ * -- MENU MAIN ------------------------------------------------------
+ * ===================================================================
+ */
+
+.MENU-main {
+  width: 90%;
+    max-width: 126.8rem;
+  margin: 0 auto;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  position: absolute;
+    z-index: 999;
+  pointer-events: none;
+}
+
+.MENU-main.MENU--centered {
+  align-items: center;
+}
+
+.MENU-main.MENU--opened {
+  pointer-events: initial;
+}
+
+.MENU-main__options{
+  margin-bottom: 20px;
+}
+
+/* == Menu Options =================================================== */
+
+.MENU__CONT-options {
+  width: 0%;
+  height: 55rem;
+  border-left: 0.75px solid var(--c-primary);
+  border-right: 0.75px solid var(--c-primary);
+  background-color: var(--bgc-primary, #202020);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.6s, background-color 0s;
+  animation: timeout 1s linear forwards;
+}
+@keyframes timeout {
+  from { transition: none; }
+}
+
+.MENU--opened .MENU__CONT-options {
+  width: 100%;
+  border-left: 1.6px solid var(--c-primary);
+  border-right: 1.6px solid var(--c-primary);
+}
+
+.MENU--about .MENU__CONT-options,
+.MENU--projects .MENU__CONT-options {
+  border: none;
+}
+
+.MENU__options {
+  opacity: 0;
+  display: flex;
+    flex-direction: column;
+    gap: 8px;
+  font-family: var(--ff-secondary);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  transition: opacity 0.5s;
+}
+
+.MENU--opened .MENU__options {
+  opacity: 1;
+}
+
+.MENU-main .option {
+  padding: 0.8rem;
+  opacity: 1;
+  color: var(--c-secondary);
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.1s;
+  cursor: pointer;
+  pointer-events: initial;
+}
+
+.MENU-main .option:hover {
+  opacity: 0.5;
+}
+
+.MENU-main .option--selected {
+  color: var(--c-primary);
+  pointer-events: none;
+}
+
+/* == Menu Icons ===================================================== */
+
+.MENU-main__CONT-icon {
+  width: 100%;
+  height: 3rem;
+  position: relative;
+}
+
+.MENU-main__CONT-icon .MENU__icon {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+    top: 0;
+    left: 100%;
+  transform: translateX(-50%);
+  transition: 0.6s;
+}
+
+/* -- Menu Icon ------------------------------------------------------ */
+
+.MENU-main__CONT-icon:has(.MENU__icon--menu) {
+  margin-bottom: 2.4rem;
+}
+
+.MENU-main__CONT-icon .MENU__icon--menu {
+  transform-origin: center;
+  cursor: pointer;
+  pointer-events: initial;
+}
+
+.MENU--centered .MENU-main__CONT-icon .MENU__icon--menu {
+  left: 50%;
+}
+
+.MENU-main__CONT-icon .MENU__icon--menu.MENU--image-zoom, 
+.MENU-main__CONT-icon .MENU__icon--scroll.MENU--image-zoom {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.MENU-main__CONT-icon .MENU__icon--menu:hover {
+  opacity: 0.5;
+}
+
+.MENU__icon--menu span {
+  width: 3rem;
+  height: 0.1px;
+  border-top: 0.2rem solid var(--c-primary);
+  display: block;
+  position: absolute;
+    left: 0;
+  transition: 0.4s;
+}
+
+.MENU__icon--menu span:nth-child(1) {
+  top: 0;
+}
+.MENU__icon--menu span:nth-child(2) {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.MENU__icon--menu span:nth-child(3) {
+  bottom: 0;
+}
+
+.MENU--opened .MENU__icon--menu span:nth-child(1),
+.MENU--project .MENU__icon--menu span:nth-child(1) {
+  width: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.MENU--opened .MENU__icon--menu span:nth-child(2),
+.MENU--project .MENU__icon--menu span:nth-child(2) {
+  opacity: 0;
+}
+.MENU--opened .MENU__icon--menu span:nth-child(3),
+.MENU--project .MENU__icon--menu span:nth-child(3) {
+  width: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* -- Scroll Icon --------------------------------------------------------------- */
+
+.MENU-main__CONT-icon:has(.MENU__icon--scroll) {
+  margin-top: 1.6rem;
+  transition: opacity 0.6s;
+}
+
+.MENU--opened .MENU-main__CONT-icon:has(.MENU__icon--scroll),
+.MENU--home .MENU-main__CONT-icon:has(.MENU__icon--scroll),
+.MENU--contact .MENU-main__CONT-icon:has(.MENU__icon--scroll) {
+  opacity: 0;
+}
+
+.MENU--centered .MENU-main__CONT-icon .MENU__icon--scroll {
+  left: 50%;
+}
+
+.MENU__icon--scroll span {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-bottom: 1.5px solid var(--c-primary);
+  display: inline-block;
+  position: absolute;
+  transition: width 0.4s, height 0.4s, transform 0.4s;
+  animation: icon_scroll 1s ease-in-out infinite alternate;
+}
+@keyframes icon_scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.MENU__icon--scroll span:nth-child(1) {
+  left: 0;
+  transform-origin: bottom right;
+  transform: translateX(-0.9rem) rotate(40deg);
+}
+.MENU__icon--scroll span:nth-child(2) {
+  right: 0;
+  transform-origin: bottom left;
+  transform: translateX(0.9rem) rotate(-40deg);
+}
+
+/* -- Language Button ------------------------------------------------ */
+
+.MENU-main__CONT-icon:has(.MENU__icon--language) {
+  width: 100%;
+  height: 3rem;
+  margin-top: 1.6rem;
+  opacity: 0;
+  position: absolute;
+    bottom: 0;
+  transition: opacity 0.2s;
+}
+
+.MENU--home:not(.MENU--centered, .MENU--opened) .MENU-main__CONT-icon:has(.MENU__icon--language) {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.MENU--opened .MENU-main__CONT-icon:has(.MENU__icon--language) {
+  opacity: 0;
+}
+
+.MENU__icon--language {
+  z-index: 99;
+  color: var(--c-primary);
+  font-family: var(--ff-secondary);
+  font-size: var(--fz-text-s);
+  text-align: center;
+  transition: left 0.6s;
+}
+
+.MENU__icon--language span{
+  width: 2.6rem;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.MENU__icon--language[data-language='en'] #language-en,
+.MENU__icon--language[data-language='es'] #language-es {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-semibold);
+  color: var(--c-secondary);
+}
+
+/*
+ * ===================================================================
+ * -- PAGES ----------------------------------------------------------
+ * ===================================================================
+ */
+
+ #PAGES-CONTAINER {
+  width: 90%;
+    max-width: 126.8rem;
+  position: absolute;
+}
