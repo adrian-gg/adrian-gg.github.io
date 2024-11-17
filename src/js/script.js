@@ -13,7 +13,7 @@ $(document).ready(function () {
   let fristTime = true;
   let scrollParent;
   let projectName, projectSize, projectCordon;
-  let device = screen.width > screen.height ? 'PC' : 'MOBILE';
+  let device = screen.width > screen.height ? 'desktop' : 'mobile';
   let currentTheme = 0;
   let numThemes = 7;
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
   $(window).resize(() => {
     screen.width = $(window).width();
     screen.height = $(window).height();
-    device = screen.width > screen.height ? 'PC' : 'MOBILE';
+    device = screen.width > screen.height ? 'desktop' : 'mobile';
   });
 
   /* $headBox.append('<link rel="stylesheet" href="./src/css/webs.css">');
@@ -198,7 +198,7 @@ $(document).ready(function () {
     $('#MENU-main .option').removeClass('option--selected');
     $this.addClass('option--selected');
 
-    if (device === 'PC') {
+    if (device === 'desktop') {
       setThemeMode(0); // form theme mode
       resetToDefault(); // from music mode
     }
@@ -288,7 +288,7 @@ $(document).ready(function () {
         .parent()
         .children('.links');
       // print project links
-      if (links && device === 'PC') {
+      if (links && device === 'desktop') {
         let linkBlock = '';
 
         Object.entries(links).forEach(([key, val]) => {
@@ -405,7 +405,7 @@ $(document).ready(function () {
 
     const { imgs, id } = project;
     let j = selectedImage;
-    const imageSize = device == 'PC' ? 'hd/' : '';
+    const imageSize = device == 'desktop' ? 'hd/' : '';
 
     for (let i = 0; i < imgs; i++) {
       const imageUrl = `./assets/images/projects/${id}/${imageSize}${id}-${j}.png`;
@@ -462,7 +462,7 @@ $(document).ready(function () {
   /* == MOVIES MODE ================================================= */
   const documentBox = document.documentElement;
   $mainBox.on('click', '[data-hobbies="movies"] .tag-block__icon', function () {
-    if (device === 'PC') {
+    if (device === 'desktop') {
       setMoviesMode();
     }
   });
@@ -568,7 +568,7 @@ $(document).ready(function () {
   }
 
   function handleMusicIconClick() {
-    if (device === 'PC') {
+    if (device === 'desktop') {
       const scrollBox = $('#ARTI-about .simplebar-content-wrapper');
       scrollMax = scrollBox[0].scrollHeight - scrollBox.outerHeight();
 
@@ -732,7 +732,7 @@ $(document).ready(function () {
 
   /* == CODE MODE =================================================== */
   $mainBox.on('click', '[data-hobbies="code"] .tag-block__icon', function () {
-    if (device === 'PC') {
+    if (device === 'desktop') {
       let icon = iconBlock('hobbies', 'x');
 
       if ($mainBox.hasClass('code-mode--on')) {
@@ -749,7 +749,7 @@ $(document).ready(function () {
     'click',
     '#ARTI-about [data-hobbies="design"] .tag-block__icon',
     function () {
-      /* if(device === 'PC') {
+      /* if(device === 'desktop') {
       setDesignMode();
 
     } else {

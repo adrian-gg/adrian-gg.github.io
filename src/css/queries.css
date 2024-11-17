@@ -241,7 +241,8 @@
   }
 
   /* -- Works -------------------------------------------------------- */
-  .projects {
+  .projects,
+  .selected-project-data {
     width: 96%;
   }
 

@@ -1,5 +1,35 @@
 const PROJECTS = [
   {
+    id: 'theweather',
+    name: 'TheWeather',
+    type: ['p-web'],
+    links: {
+      demo: 'https://adrian-gg.github.io/theweather2/dist/',
+      repo: 'https://github.com/adrian-gg/theweather2',
+    },
+    description: {
+      es: [
+        'TheWeather es una aplicación meteorológica con la que, haciendo uso de la API OpenWeatherMap,  podrás conocer las condiciones climáticas actuales y futuras, desde la temperatura y la humedad hasta la probabilidad de precipitaciones y la velocidad del viento.',
+        '(Este proyecto es una prueba técnica por lo que se añaden otras funcionalidades como el formulario de contacto)',
+      ],
+      en: [
+        'TheWeather is a weather application with which, making use of the OpenWeatherMap API, you will be able to know the current and future weather conditions, from temperature and humidity to the probability of precipitation and wind speed.',
+        '(This project is a technical test so other functionalities are added such as the contact form)',
+      ],
+    },
+    programs: [
+      'figma',
+      'html',
+      'sass',
+      'ts',
+      'react',
+      'jest',
+      'testing_library',
+    ],
+    imgs: 2,
+    current: true,
+  },
+  {
     id: 'nsmb_minigames',
     name: 'New Super Mario Bros. Minigames',
     type: ['p-web'],
@@ -19,6 +49,7 @@ const PROJECTS = [
     },
     programs: ['photoshop', 'html', 'css', 'js', 'react'],
     imgs: 2,
+    current: true,
   },
   {
     id: 'hollow_knight_hog',
@@ -38,6 +69,7 @@ const PROJECTS = [
     },
     programs: ['photoshop', 'xd', 'html', 'css', 'js', 'react'],
     imgs: 2,
+    current: true,
   },
   {
     id: 'summancer',
@@ -68,6 +100,7 @@ const PROJECTS = [
       'ai',
     ],
     imgs: 9,
+    current: false,
   },
   {
     id: 'wave',
@@ -86,6 +119,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop'],
     imgs: 7,
+    current: true,
   },
   {
     id: 'prinet',
@@ -107,6 +141,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'xd', 'html', 'css', 'js', 'react'],
     imgs: 4,
+    current: false,
   },
   {
     id: 'cosmere',
@@ -130,6 +165,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js'],
     imgs: 2,
+    current: true,
   },
   {
     id: 'stl_app',
@@ -148,6 +184,7 @@ const PROJECTS = [
     },
     programs: ['xd', 'html', 'css', 'js', 'react'],
     imgs: 6,
+    current: true,
   },
   {
     id: 'ladysibi',
@@ -180,6 +217,7 @@ const PROJECTS = [
       'mysql',
     ],
     imgs: 6,
+    current: true,
   },
   {
     id: 'stl_csjd',
@@ -198,6 +236,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'after_efects'],
     imgs: 7,
+    current: true,
   },
   {
     id: 'stl_branding',
@@ -218,6 +257,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'after_efects'],
     imgs: 6,
+    current: true,
   },
   {
     id: 'overlays',
@@ -248,6 +288,7 @@ const PROJECTS = [
       'js',
     ],
     imgs: 4,
+    current: true,
   },
   {
     id: 'puzzle_world',
@@ -279,6 +320,7 @@ const PROJECTS = [
       'js',
     ],
     imgs: 7,
+    current: true,
   },
   {
     id: 'mickan',
@@ -297,6 +339,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'xd'],
     imgs: 4,
+    current: true,
   },
   {
     id: '3_kings',
@@ -317,6 +360,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'indesign'],
     imgs: 4,
+    current: true,
   },
   {
     id: 'heartnology',
@@ -345,6 +389,7 @@ const PROJECTS = [
       'php',
     ],
     imgs: 6,
+    current: true,
   },
   {
     id: 'el_far',
@@ -363,6 +408,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'indesign'],
     imgs: 6,
+    current: true,
   },
   {
     id: 'guinxu',
@@ -381,6 +427,7 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'xd'],
     imgs: 4,
+    current: true,
   },
   {
     id: 'zonoz',
@@ -399,5 +446,6 @@ const PROJECTS = [
     },
     programs: ['illustrator', 'photoshop', 'indesign'],
     imgs: 4,
+    current: true,
   },
 ];

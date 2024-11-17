@@ -1,3 +1,5 @@
+const version = Math.random();
+
 // optionBlock
 const optionBlock = (item, itemSelected, nameList, trans) => {
   const className = item === itemSelected && 'option--selected';
@@ -107,7 +109,7 @@ const printLinkBlocks = (target, links, faces = 1) => {
 
 // iconBlock
 const iconBlock = (file, icon) => {
-  const use = `<use class="svg" href="/assets/images/icons/${file}-icons.svg#${icon}" />`;
+  const use = `<use class="svg" href="/assets/images/icons/${file}-icons.svg?v=${version}#${icon}" />`;
   let sizeIcon = 64;
 
   if (file === 'rrss' || file === 'project') {
@@ -272,8 +274,8 @@ const printFormBlock = (target, inputs) => {
 };
 
 // boxBlock
-const boxBlock = (key) => {
-  const { id, name, type } = key;
+const boxBlock = (item) => {
+  const { id, name, type } = item;
   let types = type.join(' ');
 
   return `<div class="box-block ${types}" data-project="${id}">
@@ -291,8 +293,10 @@ const boxBlock = (key) => {
 
 const printBoxBlocks = (target, data) => {
   let block = '';
-  data.forEach((key) => {
-    block += boxBlock(key);
+  data.forEach((item) => {
+    if (item?.current) {
+      block += boxBlock(item);
+    }
   });
   $(target).html(block);
 };
