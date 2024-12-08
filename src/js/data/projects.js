@@ -30,6 +30,28 @@ const PROJECTS = [
     current: true,
   },
   {
+    id: 'dotblog',
+    name: 'dotBlog',
+    type: ['p-web'],
+    links: {
+      demo: 'https://adrian-gg.github.io/demos/dotblog/',
+      repo: 'https://github.com/adrian-gg/dotblog',
+    },
+    description: {
+      es: [
+        'dotBlog (un proyecto para una prueba técnica) es un blog que te ofrece un panorama completo de la actualidad.',
+        'Desde política y economía hasta tecnología y entretenimiento, te brindamos las noticias más relevantes para que estés al día en todos los ámbitos.',
+      ],
+      en: [
+        'dotBlog (a project for a technical test) is a blog that gives you a complete overview of current affairs.',
+        'From politics and economy to technology and entertainment, we bring you the most relevant news to keep you up to date in all areas.',
+      ],
+    },
+    programs: ['figma', 'html', 'css', 'ts', 'react', 'zustand'],
+    imgs: 2,
+    current: true,
+  },
+  {
     id: 'nsmb_minigames',
     name: 'New Super Mario Bros. Minigames',
     type: ['p-web'],
