@@ -69,7 +69,11 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.subsection-block-myself .title-box {
+  margin-bottom: 0.8rem;
 }
 
 .subsection-block .links {
@@ -314,7 +318,6 @@
  */
 
 .content:has(.tag-block:not(.tag-block--inline)) {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);

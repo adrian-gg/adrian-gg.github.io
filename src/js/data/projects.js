@@ -56,8 +56,8 @@ const PROJECTS = [
     name: 'New Super Mario Bros. Minigames',
     type: ['p-web'],
     links: {
-      demo: 'https://adrian-gg.github.io/nsmb-minigames/',
-      repo: null,
+      demo: 'https://adrian-gg.github.io/demos/nsmb-minigames/',
+      repo: 'https://github.com/adrian-gg/nsmb-minigames/',
     },
     description: {
       es: [
@@ -69,7 +69,7 @@ const PROJECTS = [
         `This project will compile the game's eight most iconic mini-games: Danger, Bob-omb! Danger!, Whack-a-Monty, Wanted!, Puzzle Panel, Memory Match, Picture Poker, Pair-a-Gone y Sort or 'Splode.`,
       ],
     },
-    programs: ['photoshop', 'html', 'css', 'js', 'react'],
+    programs: ['photoshop', 'html', 'css', 'ts', 'react'],
     imgs: 2,
     current: true,
   },

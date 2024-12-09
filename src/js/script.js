@@ -198,8 +198,8 @@ $(document).ready(function () {
     $('#MENU-main .option').removeClass('option--selected');
     $this.addClass('option--selected');
 
+    setThemeMode(0); // form theme mode
     if (device === 'desktop') {
-      setThemeMode(0); // form theme mode
       resetToDefault(); // from music mode
     }
 
