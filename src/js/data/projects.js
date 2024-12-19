@@ -170,8 +170,8 @@ const PROJECTS = [
     name: 'Systems of Cosmere',
     type: ['p-web'],
     links: {
-      demo: 'https://adrian-gg.github.io/cosmere_systems/',
-      repo: null,
+      demo: 'https://adrian-gg.github.io/cosmere-systems/',
+      repo: 'https://github.com/adrian-gg/cosmere-systems/',
     },
     description: {
       es: [
