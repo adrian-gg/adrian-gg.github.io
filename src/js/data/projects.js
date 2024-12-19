@@ -4,8 +4,8 @@ const PROJECTS = [
     name: 'TheWeather',
     type: ['p-web'],
     links: {
-      demo: 'https://adrian-gg.github.io/theweather2/dist/',
-      repo: 'https://github.com/adrian-gg/theweather2',
+      demo: 'https://adrian-gg.github.io/demos/theweather/',
+      repo: 'https://github.com/adrian-gg/theweather/',
     },
     description: {
       es: [
@@ -78,8 +78,8 @@ const PROJECTS = [
     name: 'Hollow Knight: Salón de los Dioses',
     type: ['p-web'],
     links: {
-      demo: 'https://adrian-gg.github.io/hollow-knight-hog/',
-      repo: null,
+      demo: 'https://adrian-gg.github.io/demos/hollow-knight-hog/',
+      repo: 'https://adrian-gg.github.io/hollow-knight-hog/',
     },
     description: {
       es: [
@@ -89,7 +89,7 @@ const PROJECTS = [
         `This project aims to recreate the Hall of Gods, an extra area found in the fourth and last of the free content packs for Hollow Knight. Inside it houses a large number of statues of different Bosses (Gods) that will appear after encountering them throughout the game.`,
       ],
     },
-    programs: ['photoshop', 'xd', 'html', 'css', 'js', 'react'],
+    programs: ['photoshop', 'xd', 'html', 'css', 'ts', 'react'],
     imgs: 2,
     current: true,
   },
