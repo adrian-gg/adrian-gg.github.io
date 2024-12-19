@@ -79,7 +79,7 @@ const PROJECTS = [
     type: ['p-web'],
     links: {
       demo: 'https://adrian-gg.github.io/demos/hollow-knight-hog/',
-      repo: 'https://adrian-gg.github.io/hollow-knight-hog/',
+      repo: 'https://github.com/adrian-gg/hollow-knight-hog/',
     },
     description: {
       es: [
