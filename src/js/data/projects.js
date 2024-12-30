@@ -1,5 +1,29 @@
 const PROJECTS = [
   {
+    id: 'soz',
+    name: 'SOZ',
+    type: ['p-web', 'p-graphic'],
+    links: {
+      demo: 'https://adrian-gg.github.io/demos/soz/',
+      repo: 'https://github.com/adrian-gg/soz/',
+    },
+    description: {
+      es: [
+        'Por turnos, cada jugador deberá jugar una ficha, del 1 al 8, siguiendo el orden numérico. Pueden jugar la ficha encima de la línea o en un segmento.',
+        'Una vez el tablero esté lleno se realiza el recuento. En cada uno de los ocho segmentos el valor de las piezas de ambos jugadores se suman por separado y se restan entre sí. El valor total resultante del ganador de cada segmento se suma con el resto de segmentos ganados por el mismo jugador. Gana quien consiga el mayor valor.',
+        'Nota: el resultado final se mostrará en base9.',
+      ],
+      en: [
+        'In turns, each player must play one tile, from 1 to 8, following the numerical order. They can play the tile on top of the line or in a segment.',
+        'Once the board is full, the count is made. In each of the eight segments the value of the pieces of both players are added separately and subtracted from each other. The resulting total value of the winner of each segment is added to the other segments won by the same player. The winner is the one with the highest value.',
+        'Note: the final result will be displayed in base9.',
+      ],
+    },
+    programs: ['figma', 'html', 'sass', 'ts', 'react', 'illustrator'],
+    imgs: 2,
+    current: true,
+  },
+  {
     id: 'theweather',
     name: 'TheWeather',
     type: ['p-web'],
@@ -185,7 +209,7 @@ const PROJECTS = [
         `By interacting with each of them you can know the name and number of planets, their position and everything that is known to date.`,
       ],
     },
-    programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js'],
+    programs: ['illustrator', 'photoshop', 'xd', 'html', 'css', 'js', 'jquery'],
     imgs: 2,
     current: true,
   },
