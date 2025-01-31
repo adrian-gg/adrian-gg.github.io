@@ -1,5 +1,27 @@
 const PROJECTS = [
   {
+    id: 'mincode',
+    name: 'mincode',
+    type: ['p-web'],
+    links: {
+      demo: 'https://adrian-gg.github.io/demos/mincode/',
+      repo: 'https://github.com/adrian-gg/mincode/',
+    },
+    description: {
+      es: [
+        'Comienza a mostrar tus proyectos al mundo. Con esta plantilla (en fase beta), podrás generar un sitio web donde mostrar todos tus pequeños proyectos web de forma organizada y atractiva.',
+        'Adaptala a tu estilo personal. Cambia los colores, las fuentes y el diseño general con el estilo que más te represente. La plantilla está desarrollada con código abierto, por lo que puedes modificarla y personalizarla aún más si tienes conocimientos técnicos.',
+      ],
+      en: [
+        'Start showing your projects to the world. With this template (in beta phase), you will be able to generate a website where you can show all your small web projects in an organized and attractive way.',
+        'Adapt it to your personal style. Change the colors, fonts and overall design to the style that best represents you. The template is developed with open source code, so you can modify and customize it even more if you have technical knowledge.',
+      ],
+    },
+    programs: ['figma', 'html', 'css', 'ts', 'react'],
+    imgs: 2,
+    current: true,
+  },
+  {
     id: 'soz',
     name: 'SOZ',
     type: ['p-web', 'p-graphic'],
