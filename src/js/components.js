@@ -215,12 +215,35 @@ const tagBlock = (item, nameList, typeBlock, list) => {
     </div>`;
 };
 
-const printTagBlocks = (target, data, nameList, typeBlock, list) => {
+const printTagBlocks = (
+  target,
+  data,
+  nameList,
+  typeBlock,
+  list = null,
+  groups = null
+) => {
   let block = '';
-  data.forEach((key) => {
-    block += tagBlock(key, nameList, typeBlock, list);
-  });
-  $(target).html(block);
+  if (!groups) {
+    data.forEach((key) => {
+      block += tagBlock(key, nameList, typeBlock, list);
+    });
+    $(target).html(block);
+  } else {
+    let groupBlock = '';
+    groups.forEach((group, i) => {
+      let block = '';
+      data[i].forEach((key) => {
+        block += tagBlock(key, nameList, typeBlock, list);
+      });
+      if (block !== '')
+        groupBlock += `<div class="tag-group">
+        <h6>${getTranslation(['lst_stack_groups', group])}</h6>
+        <div class="tag-group-content">${block}</div>
+      </div>`;
+    });
+    $(target).html(groupBlock);
+  }
 };
 
 // inputBlock

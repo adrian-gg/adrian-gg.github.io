@@ -6,14 +6,17 @@ const PROGRAMS = ABOUT.stack;
 const HOBBIES = ABOUT.hobbies;
 
 const menuMainOptions = ['home', 'about', 'projects', 'contact'];
-const stack = PROGRAMS.filter((stack) => stack.current);
+const stackGroups = ['web', 'graphic', 'other'];
+const stack = stackGroups.map((group) =>
+  PROGRAMS.filter((stack) => stack.current && stack.group === group)
+);
 const aboutSubsections = Object.keys(ABOUT);
 const projectsFilterOptions = ['all', 'web', 'graphic'];
 const projectsSubsections = ['_projectname', 'tools'];
 const dataContactInputs = [
   { name: 'name', type: 'text' },
   { name: 'email', type: 'email' },
-  { name: 'subject', type: 'text' },
+  /* { name: 'subject', type: 'text' }, */
   { name: 'message', type: 'textarea' },
   { name: 'submit', type: 'submit' },
 ];
@@ -80,7 +83,7 @@ const PAGE_CONTENT = {
     },
     {
       func: printTagBlocks, // target, data, nameList, typeBlock, list
-      props: ['.content-stack', stack, 'stack', 'inline'],
+      props: ['.content-stack', stack, 'stack', 'inline', null, stackGroups],
     },
     {
       func: printTagBlocks, // target, data, nameList, typeBlock, list

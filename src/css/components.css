@@ -342,10 +342,24 @@
   background-position: center;
 }
 
-.content:has(.tag-block--inline) {
+.content:has(.tag-block--inline):not(.content-stack),
+.tag-group-content {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem 1rem;
+}
+
+.tag-group {
+  margin-bottom: 2rem;
+}
+
+.tag-group h6 {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.tag-group-content {
+  gap: 1rem 1rem;
 }
 
 .tag-block--inline {

@@ -17,6 +17,11 @@ const TRANSLATIONS = {
       hobbies: 'Hobbies and Interests',
       tools: 'Tools',
     },
+    lst_stack_groups: {
+      web: 'Web Development',
+      graphic: 'Graphic Design',
+      other: 'Others',
+    },
     lst_menu_filter_options: {
       all: 'All',
       web: 'Web',
@@ -48,6 +53,11 @@ const TRANSLATIONS = {
       stack: 'Stack tecnológico',
       hobbies: 'Aficiones e intereses',
       tools: 'Herramientas',
+    },
+    lst_stack_groups: {
+      web: 'Desarrollo web',
+      graphic: 'Diseño gráfico',
+      other: 'Otros',
     },
     lst_menu_filter_options: {
       all: 'Todos',
