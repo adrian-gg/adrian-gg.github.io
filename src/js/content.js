@@ -64,7 +64,11 @@ const PAGE_CONTENT = {
     },
     {
       func: printInfoBlocks, // target, data, nameList
-      props: ['.content-studies', STUDIES, 'studies'],
+      props: [
+        ['#ARTI-about .content-studies', '#ARTI-about .title-studies'],
+        STUDIES,
+        'studies',
+      ],
     },
     {
       func: printInfoBlocks, // target, data, nameList

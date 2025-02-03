@@ -30,12 +30,12 @@ const classNames = (...classes) => {
 };
 
 const removeClasses = (target, classes, prevClass = '') => {
-  classes.forEach(c => target.removeClass(`${prevClass}${c}`));
-}
+  classes.forEach((c) => target.removeClass(`${prevClass}${c}`));
+};
 
 const addClasses = (target, classes, prevClass = '') => {
-  classes.forEach(c => target.addClass(`${prevClass}${c}`));
-}
+  classes.forEach((c) => target.addClass(`${prevClass}${c}`));
+};
 
 // texts
 const formatText = (text, cont) => {
@@ -50,6 +50,8 @@ const formatText = (text, cont) => {
 
 const formatDate = (date) => {
   const { years, months } = date;
+  if (years === 0 && months === 0) return '';
+
   const transYears =
     years === 1 ? getTranslation('year') : getTranslation('years');
   const transMonths =
@@ -67,7 +69,7 @@ const formatDate = (date) => {
 
 function findById(id, list) {
   return list.find((item) => item.id === id);
-};
+}
 
 // form
 function validateForm() {
@@ -133,7 +135,7 @@ function validateForm() {
 
 // blocks
 function printContent(list) {
-  list.forEach(({func, props}) => {
+  list.forEach(({ func, props }) => {
     func(...props);
   });
 }

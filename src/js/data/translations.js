@@ -46,7 +46,7 @@ const TRANSLATIONS = {
       experience: 'Experiencia',
       studies: 'Estudios',
       stack: 'Stack tecnológico',
-      hobbies: 'Hobbies e intereses',
+      hobbies: 'Aficiones e intereses',
       tools: 'Herramientas',
     },
     lst_menu_filter_options: {

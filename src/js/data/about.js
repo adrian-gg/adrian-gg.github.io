@@ -64,6 +64,40 @@ const ABOUT = {
   },
   experience: [
     {
+      id: 'arocival',
+      name: 'Arocival',
+      description: {
+        en: 'Computer Assistant',
+        es: 'Auxiliar informático',
+      },
+      date: {
+        en: 'Dec. 2024 - Currently',
+        es: 'Dic. 2024 - Actualmente',
+      },
+      exp: {
+        years: 0,
+        months: 0,
+      },
+      logo: 'arocival',
+    },
+    {
+      id: 'freelance',
+      name: 'Freelance',
+      description: {
+        en: 'Front-end developer / Graphic designer',
+        es: 'Desarrollador front-end / Diseñador gráfico',
+      },
+      date: {
+        en: 'Jan. 2023 - Jan. 2024',
+        es: 'Ene. 2023 - Ene. 2024',
+      },
+      exp: {
+        years: 1,
+        months: 0,
+      },
+      logo: 'freelance',
+    },
+    {
       id: 'stl',
       name: 'Streamloots',
       description: {
@@ -155,7 +189,7 @@ const ABOUT = {
     { id: 'html', name: 'HTML5', current: true },
     { id: 'css', name: 'CSS3', current: true },
     { id: 'bootstrap', name: 'Bootstrap', current: false },
-    { id: 'tailwind', name: 'Tailwind', current: false },
+    { id: 'tailwind', name: 'Tailwind', current: true },
     { id: 'sass', name: 'Sass', current: true },
     { id: 'js', name: 'JavaScript', current: true },
     { id: 'jquery', name: 'jQuery', current: true },
