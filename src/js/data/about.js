@@ -2,7 +2,7 @@ const CARD = {
   name: 'Adrián García',
   photo: './assets/images/me.jpg',
   photo_alt: {
-    en: 'Black and white photo of Adrian',
+    en: 'Black and white photo of Adrián',
     es: 'Foto en blanco y negro de Adrián',
   },
   ocupations: {
@@ -135,7 +135,7 @@ const ABOUT = {
   studies: [
     {
       id: 'ua',
-      name: 'Undefind Academy',
+      name: 'Undefined Academy',
       description: {
         en: 'Full-stack JavaScript Developer',
         es: 'Desarrollador JavaScript full-stack',
@@ -205,7 +205,7 @@ const ABOUT = {
     },
     { id: 'jest', name: 'Jest', group: 'web', current: true },
     { id: 'node', name: 'Node', group: 'web', current: false },
-    { id: 'next', name: 'Next', group: 'web', current: false },
+    { id: 'next', name: 'Next', group: 'web', current: true },
     { id: 'mongodb', name: 'MongoDB', group: 'web', current: false },
     { id: 'angular', name: 'Angular', group: 'web', current: false },
     { id: 'firebase', name: 'Firebase', group: 'web', current: false },

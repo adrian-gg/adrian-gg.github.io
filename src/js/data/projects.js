@@ -1,5 +1,29 @@
 const PROJECTS = [
   {
+    id: 'paleta',
+    name: 'PALETA',
+    type: ['p-web'],
+    links: {
+      demo: 'https://paleta-gold.vercel.app/',
+      repo: 'https://github.com/adrian-gg/paleta/',
+    },
+    description: {
+      es: [
+        'Un generador de paletas simple que se centra en permitir a los usuarios generar combinaciones de colores armoniosas de manera sencilla y rápida.',
+        'La herramienta se basa en los principios de la teoría del color, incorporando combinaciones análogas, complementarias y triádicas para asegurar resultados visualmente atractivos.',
+        'Los usuarios tienen la capacidad de ajustar parámetros como la saturación, el brillo y el tono, lo que les permite personalizar cada paleta según sus necesidades y preferencias específicas.',
+      ],
+      en: [
+        'A simple palette generator that focuses on enabling users to generate harmonious color combinations easily and quickly.',
+        'The tool is based on the principles of color theory, incorporating analogous, complementary and triadic combinations to ensure visually appealing results.',
+        'Users have the ability to adjust parameters such as saturation, brightness and hue, allowing them to customize each palette to their specific needs and preferences.',
+      ],
+    },
+    programs: ['html', 'css', 'tailwind', 'ts', 'react', 'next'],
+    imgs: 2,
+    current: true,
+  },
+  {
     id: 'mincode',
     name: 'mincode',
     type: ['p-web'],
