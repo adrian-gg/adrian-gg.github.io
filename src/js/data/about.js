@@ -212,6 +212,7 @@ const ABOUT = {
     { id: 'php', name: 'PHP', group: 'web', current: false },
     { id: 'wordpress', name: 'Wordpress', group: 'web', current: false },
     { id: 'mysql', name: 'MySQL', group: 'web', current: true },
+    { id: 'prisma', name: 'Prisma', group: 'web', current: false },
     { id: 'git', name: 'Git', group: 'web', current: true },
     { id: 'github', name: 'Github', group: 'web', current: true },
     { id: 'markdown', name: 'Markdown', group: 'web', current: false },
