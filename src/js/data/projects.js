@@ -1,5 +1,36 @@
 const PROJECTS = [
   {
+    id: 'treyo',
+    name: 'Treyo',
+    type: ['p-web'],
+    links: {
+      demo: 'https://treyo.vercel.app/',
+      repo: 'https://github.com/adrian-gg/treyo/',
+    },
+    description: {
+      es: [
+        'Treyo es un clon funcional de Trello, diseñado para ofrecer una plataforma intuitiva y eficiente de gestión de proyectos y tareas colaborativas. El proyecto replica las características clave de Trello, como la creación de tableros, listas, y tarjetas, con el objetivo de proporcionar a los usuarios una experiencia fluida para organizar y priorizar su trabajo en equipo.',
+        'A través de una interfaz moderna y dinámica, Treyo permite a los usuarios gestionar proyectos de manera efectiva y mantener un seguimiento claro de sus tareas, todo desde una plataforma sencilla y accesible',
+      ],
+      en: [
+        'Treyo is a functional clone of Trello, designed to offer an intuitive and efficient collaborative project and task management platform. The project replicates key Trello features, such as the creation of boards, lists, and cards, with the goal of providing users with a seamless experience to organize and prioritize their teamwork.',
+        'Through a modern and dynamic interface, Treyo allows users to effectively manage projects and keep clear track of their tasks, all from a simple and accessible platform.',
+      ],
+    },
+    programs: [
+      'html',
+      'css',
+      'tailwind',
+      'ts',
+      'react',
+      'next',
+      'prisma',
+      'mysql'
+    ],
+    imgs: 4,
+    current: true,
+  },
+  {
     id: 'paleta',
     name: 'PALETA',
     type: ['p-web'],
