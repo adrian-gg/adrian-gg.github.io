@@ -1,7 +1,7 @@
 let currentPage = 'home';
 
 $(document).ready(function () {
-  const $headBox = $('head');
+  //const $headBox = $('head');
   const $bodyBox = $('body');
   const $mainBox = $('#MAIN-CONTAINER');
   const $pagesBox = $('#PAGES-CONTAINER');
@@ -535,22 +535,26 @@ $(document).ready(function () {
   let playingSong = false;
   let secondsCounter = 0;
   let intervalSeconds;
+  const songList = SONGS.filter((song) => song.current);
   const song = {
     number: 0,
+    get id() {
+      return songList[this.number].id;
+    },
     get name() {
-      return SONGS[this.number].name;
+      return songList[this.number].name;
     },
     get author() {
-      return SONGS[this.number].author;
+      return songList[this.number].author;
     },
     get duration() {
-      return SONGS[this.number].duration;
+      return songList[this.number].duration;
     },
     get cover() {
-      return SONGS[this.number].cover;
+      return songList[this.number].cover;
     },
   };
-  let songTrack = createAudioTrack(song.number);
+  let songTrack = createAudioTrack(song.id);
 
   $mainBox.on(
     'click',
@@ -620,9 +624,9 @@ $(document).ready(function () {
 
   function changeSong(newNumber) {
     resetProgress();
-    song.number = (newNumber + SONGS.length) % SONGS.length;
+    song.number = (newNumber + songList.length) % songList.length;
     songTrack.pause();
-    songTrack = createAudioTrack(song.number);
+    songTrack = createAudioTrack(song.id);
     updateUI(true, true);
     songTrack.play();
     createInterval();
@@ -749,12 +753,11 @@ $(document).ready(function () {
     'click',
     '#ARTI-about [data-hobbies="design"] .tag-block__icon',
     function () {
-      /* if(device === 'desktop') {
-      setDesignMode();
-
-    } else {
-      setThemeMode();
-  } */
+      /* if (device === 'desktop') {
+        setDesignMode();
+      } else {
+        setThemeMode();
+      } */
       setThemeMode();
     }
   );
@@ -766,8 +769,8 @@ $(document).ready(function () {
     $bodyBox.attr('data-theme', currentTheme);
   };
 
-  /* function setDesignMode() {
-    const time = 1.5;
+  /*function setDesignMode() {
+    const time = 2;
     const body = $(window);
     const designModeBox = $('.design-mode');
     const designBtn = $('#ARTI-about [data-hobbies="design"]');
@@ -796,7 +799,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $mainBox.removeClass('design-mode--on');
     }, (time * 4 + time) * 1000);
-  } */
+  }*/
 
   /* == PIANO MODE ================================================== */
 

@@ -1,4 +1,4 @@
-const version = Math.random();
+//const version = Math.random();
 
 // optionBlock
 const optionBlock = (item, itemSelected, nameList, trans) => {
@@ -109,7 +109,8 @@ const printLinkBlocks = (target, links, faces = 1) => {
 
 // iconBlock
 const iconBlock = (file, icon) => {
-  const use = `<use class="svg" href="/assets/images/icons/${file}-icons.svg?v=${version}#${icon}" />`;
+  //const use = `<use class="svg" href="/assets/images/icons/${file}-icons.svg?v=${version}#${icon}" />`;
+  const use = `<use class="svg" href="/assets/images/icons/${file}-icons.svg#${icon}" />`;
   let sizeIcon = 64;
 
   if (file === 'rrss' || file === 'project') {

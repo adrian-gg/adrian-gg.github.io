@@ -6,8 +6,8 @@ const CARD = {
     es: 'Foto en blanco y negro de Adrián',
   },
   ocupations: {
-    en: ['Web Developer', 'Graphic Designer'],
-    es: ['Desarrollador Web', 'Diseñador Gráfico'],
+    en: ['Front-End Web Developer' /* , 'Graphic Designer' */],
+    es: ['Desarrollador Web Front-End' /* , 'Diseñador Gráfico' */],
   },
   rrss: [
     {
@@ -88,11 +88,11 @@ const ABOUT = {
         es: 'Desarrollador front-end / Diseñador gráfico',
       },
       date: {
-        en: 'Jan. 2023 - Jan. 2024',
-        es: 'Ene. 2023 - Ene. 2024',
+        en: 'Jan. 2023 - Dec. 2024',
+        es: 'Ene. 2023 - Dic. 2024',
       },
       exp: {
-        years: 1,
+        years: 2,
         months: 0,
       },
       logo: 'freelance',
@@ -134,21 +134,21 @@ const ABOUT = {
   ],
   studies: [
     {
-      id: 'ua',
-      name: 'Undefined Academy',
+      id: 'medac',
+      name: 'Medac Castellón',
       description: {
-        en: 'Full-stack JavaScript Developer',
-        es: 'Desarrollador JavaScript full-stack',
+        en: 'Multiplatform web development',
+        es: 'Desarrollo web multiplataforma',
       },
       date: {
-        en: 'Mar. 2023 - Mar. 2024',
-        es: 'Mar. 2023 - Mar. 2024',
+        en: 'Sep. 2025 - Currently',
+        es: 'Sep. 2025 - Actualmente',
       },
       exp: {
-        years: 1,
+        years: 0,
         months: 0,
       },
-      logo: 'undefind_academy',
+      logo: 'medac',
     },
     {
       id: 'esat',
@@ -158,8 +158,8 @@ const ABOUT = {
         es: 'Desarrollo web front-end y UX/UI',
       },
       date: {
-        en: 'Nov. 2019 - Nov. 2020',
-        es: 'Nov. 2019 - Nov. 2020',
+        en: 'Nov. 2019 - Jul. 2020',
+        es: 'Nov. 2019 - Jul. 2020',
       },
       exp: {
         years: 1,
@@ -175,8 +175,8 @@ const ABOUT = {
         es: 'Diseño Gráfico y Multimedia',
       },
       date: {
-        en: 'Nov. 2015 - Nov. 2019',
-        es: 'Nov. 2015 - Nov. 2019',
+        en: 'Sep. 2015 - Jun. 2019',
+        es: 'Sep. 2015 - Jun. 2019',
       },
       exp: {
         years: 4,
@@ -201,9 +201,9 @@ const ABOUT = {
       id: 'testing_library',
       name: 'Testing Library',
       group: 'web',
-      current: true,
+      current: false,
     },
-    { id: 'jest', name: 'Jest', group: 'web', current: true },
+    { id: 'jest', name: 'Jest', group: 'web', current: false },
     { id: 'node', name: 'Node', group: 'web', current: false },
     { id: 'next', name: 'Next', group: 'web', current: true },
     { id: 'mongodb', name: 'MongoDB', group: 'web', current: false },
@@ -213,10 +213,10 @@ const ABOUT = {
     { id: 'wordpress', name: 'Wordpress', group: 'web', current: false },
     { id: 'mysql', name: 'MySQL', group: 'web', current: true },
     { id: 'prisma', name: 'Prisma', group: 'web', current: false },
-    { id: 'git', name: 'Git', group: 'web', current: true },
-    { id: 'github', name: 'Github', group: 'web', current: true },
+    { id: 'git', name: 'Git', group: 'web', current: false },
+    { id: 'github', name: 'Github', group: 'web', current: false },
     { id: 'markdown', name: 'Markdown', group: 'web', current: false },
-    { id: 'npm', name: 'npm', group: 'web', current: true },
+    { id: 'npm', name: 'npm', group: 'web', current: false },
     { id: 'pnpm', name: 'pnpm', group: 'web', current: false },
     { id: 'vite', name: 'Vite', group: 'web', current: true },
     { id: 'ai', name: 'A.I.', group: 'web', current: true },
@@ -237,7 +237,7 @@ const ABOUT = {
       current: true,
     },
     { id: 'indesign', name: 'InDesign', group: 'graphic', current: true },
-    { id: 'blender', name: 'Blender', group: 'graphic', current: true },
+    { id: 'blender', name: 'Blender', group: 'graphic', current: false },
     { id: 'construct2', name: 'Construct 2', group: 'other', current: false },
     { id: 'unity', name: 'Unity', group: 'other', current: false },
     { id: 'godot', name: 'Godot', group: 'other', current: false },
@@ -256,6 +256,7 @@ const ABOUT = {
     { id: 'code', name: { en: 'Code', es: 'Code' } },
     { id: 'design', name: { en: 'Design', es: 'Diseño' } },
     { id: 'piano', name: { en: 'Piano', es: 'Piano' } },
-    { id: 'chocolate', name: { en: 'Chocolate', es: 'Chocolate' } },
+    //{ id: 'chocolate', name: { en: 'Chocolate', es: 'Chocolate' } },
+    { id: 'reading', name: { en: 'Reading', es: 'Lectura' } },
   ],
 };

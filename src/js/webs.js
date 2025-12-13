@@ -2,20 +2,21 @@ $(document).ready(function () {
   /* ============================== AJAX ============================== */
 
   const WEBS = [
-    '7', //book
-    'david',
-    'ac',
-    '8', //map
+    '1', //book
+    'anime',
+    'pc',
     'future',
     'newspaper',
-    '8', //pc
-    'text',
+    '2', //map,
     'homer',
-    'duo',
-    '4', //animation
+    '404',
+    'text',
+    'graphic',
     'rock',
-    'hello',
     'hyperspace',
+    'hello',
+    '3', //
+    'pattern',
     'noise',
     'matrix',
   ]; //15 of 17
@@ -52,11 +53,12 @@ $(document).ready(function () {
     });
   }
   function printWebTagBox(target, data) {
+    console.log(target, data);
     data.forEach((item) => {
       const { name } = item;
       const block = `<div class="web_tag__item">
           <div class="web_tag__img"></div>
-          <div class="web_tag__name">${name[LANG] ?? name}</div>
+          <div class="web_tag__name">${name[LANG] || name}</div>
         </div>`;
       $(target).append(block);
     });
@@ -82,6 +84,9 @@ $(document).ready(function () {
           </div>`
         );
       });
+
+      // print current page
+      $('.web_current_page').append(currentPage);
 
       // print ocupation
       const ocupationsBlock = CARD.ocupations[LANG].join(
@@ -112,21 +117,23 @@ $(document).ready(function () {
       printDescriptionBlock('.web_box_description', MYSELF[LANG], 'p');
       // print experience content
       printWebInfoBox('.web_box_experience_cont', EXPERIENCE);
-      // print experience content
+      // print studies content
       printWebInfoBox('.web_box_studies_cont', STUDIES);
       // print stack content
-      printWebTagBox('.web_box_stack_cont', stack);
+      //printWebTagBox('.web_box_stack_cont', stack);
       // print hobbies content
       printWebTagBox('.web_box_hobbies_cont', HOBBIES);
 
       // print links
       CARD.rrss.forEach((link) => {
-        const { face_front } = link;
-        const block = `<div class="web_submenu__option">
+        const { face_front, current } = link;
+        if (current) {
+          const block = `<div class="web_submenu__option">
             <div class="web_submenu__option_img"></div>
             <span>${face_front}</span>
           </div>`;
-        $('.web_box_links').append(block);
+          $('.web_box_links').append(block);
+        }
       });
     })
     .catch((error) => {

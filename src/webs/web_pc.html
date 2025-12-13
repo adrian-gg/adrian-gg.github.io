@@ -1,0 +1,67 @@
+<div id="web-pc" class="design-mode__web">
+  <div class="web_main">
+    <div class="web_screen">
+      <div class="web_folders web_box_menu"></div>
+      <div></div>
+      <div class="web_folders web_box_hobbies_cont"></div>
+    </div>
+
+    <div class="web_bar">
+      <img
+        src="../../assets/images/webs/web_pc/logo.png"
+        height="100%"
+        alt=""
+      />
+      <div class="web_menu">
+        <div class="web_op">
+          <img src="../../assets/images/webs/web_pc/file.png" alt="" />
+        </div>
+        <div class="web_op web_op_sel">
+          <img src="../../assets/images/webs/web_pc/image.png" alt="" />
+        </div>
+      </div>
+      <div class="web_date"></div>
+    </div>
+    <div
+      class="web_window"
+      style="width: 80rem; height: 46rem; left: 46rem; top: 4rem"
+    >
+      <div class="web_window_bar">
+        <p class="web_box_myself"></p>
+        <div class="web_window_bar_options">
+          <img src="../../assets/images/webs/web_pc/op_1.png" alt="op1" />
+          <img src="../../assets/images/webs/web_pc/op_2.png" alt="op2" />
+          <img src="../../assets/images/webs/web_pc/op_3.png" alt="op3" />
+        </div>
+      </div>
+      <div class="web_window_content" style="padding: 3rem 6rem">
+        <p class="web_box_description"></p>
+      </div>
+    </div>
+    <div class="web_window" style="left: 34rem; top: 29rem">
+      <div class="web_window_bar">
+        <p>Adrián García</p>
+        <div class="web_window_bar_options">
+          <img src="../../assets/images/webs/web_pc/op_1.png" alt="op1" />
+          <img src="../../assets/images/webs/web_pc/op_2.png" alt="op2" />
+          <img src="../../assets/images/webs/web_pc/op_3.png" alt="op3" />
+        </div>
+      </div>
+      <div class="web_window_content">
+        <img src="../../assets/images/me.jpg" alt="me" style="width: 28rem" />
+      </div>
+    </div>
+  </div>
+  <div class="web_background"></div>
+
+  <script>
+    const date = new Date();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    document.querySelector(
+      '#web-pc .web_date'
+    ).innerHTML = `${day}/${month}/${year}`;
+  </script>
+</div>
