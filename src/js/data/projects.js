@@ -25,9 +25,33 @@ const PROJECTS = [
       'react',
       'next',
       'prisma',
-      'mysql'
+      'mysql',
     ],
     imgs: 4,
+    current: true,
+  },
+  {
+    id: 'xat',
+    name: 'XAT',
+    type: ['p-web'],
+    links: {
+      demo: 'https://xat-gamma.vercel.app/',
+      repo: 'https://github.com/adrian-gg/ibb-technical-test/',
+    },
+    description: {
+      es: [
+        'Xat es una prueba técnica que consiste en el desarrollo de una aplicación de chat a partir de un SDK que genera datos jerárquicos de forma dinámica.',
+        'El objetivo es construir una interfaz UI/UX limpia y moderna que permita visualizar contactos, inboxes y outboxes, mostrando los mensajes enviados y recibidos de forma ordenada y similar a aplicaciones de mensajería habituales.',
+        'La aplicación no permite enviar mensajes, sino que se centra en la correcta gestión, organización y visualización de la información proporcionada por el SDK.',
+      ],
+      en: [
+        'Xat is a technical test that consists of developing a chat application based on an SDK that dynamically generates hierarchical data.',
+        'The goal is to build a clean and modern UI/UX interface that allows users to view contacts, inboxes, and outboxes, displaying sent and received messages in an orderly manner similar to common messaging applications.',
+        'The application does not allow users to send messages, but rather focuses on the proper management, organization, and display of the information provided by the SDK.',
+      ],
+    },
+    programs: ['html', 'css', 'tailwind', 'ts', 'react', 'next', 'zustand'],
+    imgs: 2,
     current: true,
   },
   {
