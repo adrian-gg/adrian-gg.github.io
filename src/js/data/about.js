@@ -6,8 +6,11 @@ const CARD = {
     es: 'Foto en blanco y negro de Adrián',
   },
   ocupations: {
-    en: ['Front-End Web Developer' /* , 'Graphic Designer' */],
-    es: ['Desarrollador Web Front-End' /* , 'Diseñador Gráfico' */],
+    en: [/* 'Front-End Web Developer', */ 'Web Developer', 'Graphic Designer'],
+    es: [
+      /* 'Desarrollador Web Front-End', */ 'Desarrollador Web',
+      'Diseñador Gráfico',
+    ],
   },
   rrss: [
     {
