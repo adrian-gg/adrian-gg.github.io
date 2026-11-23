@@ -7,6 +7,7 @@ const TRANSLATIONS = {
       home: 'Home',
       about: 'About',
       projects: 'Projects',
+      misc: 'Miscellaneous',
       contact: 'Contact',
     },
     lst_subsections: {
@@ -44,6 +45,7 @@ const TRANSLATIONS = {
       home: 'Inicio',
       about: 'Perfil',
       projects: 'Proyectos',
+      misc: 'Cosas varias',
       contact: 'Contacto',
     },
     lst_subsections: {

@@ -35,6 +35,11 @@ $(document).ready(function () {
    */
 
   function loadPage(page) {
+    if (page === 'misc') {
+      window.open('https://adrian-gg.github.io/demos/mincode/', '_blank');
+      return;
+    }
+
     $.ajax({
       url: `./src/${page}.html`,
       success: function (data) {

@@ -5,7 +5,7 @@ const STUDIES = ABOUT.studies;
 const PROGRAMS = ABOUT.stack;
 const HOBBIES = ABOUT.hobbies;
 
-const menuMainOptions = ['home', 'about', 'projects', 'contact'];
+const menuMainOptions = ['home', 'about', 'projects', 'misc', 'contact'];
 const stackGroups = ['web', 'graphic', 'other'];
 const stack = stackGroups.map((group) =>
   PROGRAMS.filter((stack) => stack.current && stack.group === group)
