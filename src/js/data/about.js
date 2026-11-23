@@ -140,8 +140,8 @@ const ABOUT = {
       id: 'medac',
       name: 'Medac Castellón',
       description: {
-        en: 'Multiplatform application development',
-        es: 'Desarrollo aplicaciones multiplataforma',
+        en: 'Multiplatform Application Development',
+        es: 'Desarrollo Aplicaciones Multiplataforma',
       },
       date: {
         en: 'Sep. 2025 - Currently',
